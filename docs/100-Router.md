@@ -1,10 +1,5 @@
 ## Router
 
-* [Defining routes](#defining-routes)
-* [Error handling](#error-handling)
-* [Middleware](#middleware)
-
-
 ### Defining routes
 
 Routes are defined in controller classes, which are then connected to the router.
@@ -16,7 +11,7 @@ of the controller classes.
 
 A simple controller example could look like this:
 
-[src/SimpleHomeController.php](src/SimpleHomeController.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/SimpleHomeController.php' target='_blank'>src/SimpleHomeController.php</a>
 
 ~~~php
 <?php
@@ -56,7 +51,7 @@ If this route is matched, then the `$params` array will contain the keys `userna
 
 Let's connect the above `SimpleHomeController` class to a router instance in an index.php file: 
 
-[examples/router_simple/index.php](examples/router_simple/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/router_simple/index.php' target='_blank'>examples/router_simple/index.php</a>
 
 ~~~php
 <?php
@@ -93,7 +88,7 @@ If you visit a route which is not defined, you may get a 500 error without any u
 We will make a setup in order to catch all errors. This will also 
 deliver a better user experience:
 
-[examples/router_error/index.php](examples/router_error/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/router_error/index.php' target='_blank'>examples/router_error/index.php</a>
 
 ~~~php
 <?php
@@ -157,7 +152,7 @@ In the controller method the middleware object is also the second parameter.
 
 Here is a controller where both `$params` and `$middleware_object` are used: 
 
-[src/HomeController.php](src/HomeController.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/HomeController.php' target='_blank'>src/HomeController.php</a>
 
 ~~~php
 <?php
@@ -183,7 +178,7 @@ class HomeController {
 
 Then create your application like this: 
 
-[examples/router_middleware/index.php](examples/router_middleware/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/router_middleware/index.php' target='_blank'>examples/router_middleware/index.php</a>
 
 ~~~php
 <?php

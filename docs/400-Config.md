@@ -1,7 +1,5 @@
 ## Config
 
-
-
 All files in the [config/](config) folder are read first, 
 when creating the config instance. 
 
@@ -11,7 +9,7 @@ we will just focus on the `App.php` file.
 Any configuration file being used, should return an assoc array with key names and values, 
 and that is what the `config/App.php` file does. 
 
-[config/App.php](config/App.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config/App.php' target='_blank'>config/App.php</a>
 
 ~~~php
 <?php
@@ -25,7 +23,7 @@ return [
 Then all files in the [config-locale/](config-locale) directory are read.
 Any values in these files will override the values found in `config`.
 
-[config-locale/App.php](config-locale/App.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config-locale/App.php' target='_blank'>config-locale/App.php</a>
 
 ~~~php
 <?php
@@ -42,7 +40,7 @@ These settings will override the general settings in `config`.
 Let's use the `App.php` configuration in a simple example, where we will be reading
 some configuration values: 
 
-[examples/config/index.php](examples/config/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/config/index.php' target='_blank'>examples/config/index.php</a>
 
 ~~~php
 <?php

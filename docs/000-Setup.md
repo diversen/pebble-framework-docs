@@ -1,7 +1,5 @@
 ## Setup
 
-
-
 This is the documentation for the `Pebble Framework`. If you clone this repo, 
 you can easily run all code examples: 
 

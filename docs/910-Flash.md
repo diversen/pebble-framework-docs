@@ -1,7 +1,5 @@
 ## Flash
 
-
-
 Flash messages are messages that are displayed to the client -
 usually after some action has been performed. 
 
@@ -17,7 +15,7 @@ in the `$_SESSION['flash']` variable.
 Then we are redirected back to `/`, where the flash messages are 
 displayed and cleared.  
 
-[src/FlashTestController.php](src/FlashTestController.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/FlashTestController.php' target='_blank'>src/FlashTestController.php</a>
 
 ~~~php
 <?php
@@ -76,7 +74,7 @@ class FlashTestController
 
 We execute this controller in our `index.php` file: 
 
-[examples/flash/index.php](examples/flash/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/flash/index.php' target='_blank'>examples/flash/index.php</a>
 
 ~~~php
 <?php

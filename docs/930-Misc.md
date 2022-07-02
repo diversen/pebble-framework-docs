@@ -1,20 +1,5 @@
 ## Misc
 
-* [Captcha](#captcha)
-* [CSRF](#csrf)
-* [Cookie](#cookie)
-* [Session](#session)
-* [SessionTimed](#sessiontimed)
-* [File](#file)
-* [DBCache](#dbcache)
-* [ExceptionTrace](#exceptiontrace)
-* [Headers](#headers)
-* [JSON](#json)
-* [Path](#path)
-* [Random](#random)
-* [Server](#server)
-
-
 This part show other small classes you can use:
 
 ### Captcha
@@ -26,7 +11,7 @@ You need to install this package, e.g. using composer:
 
 Usage:
 
-[examples/captcha/index.php](examples/captcha/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/captcha/index.php' target='_blank'>examples/captcha/index.php</a>
 
 ~~~php
 <?php
@@ -63,7 +48,7 @@ For implementation you may look at [this stackoverflow answer](https://stackover
 
 Usage:
 
-[examples/csrf/index.php](examples/csrf/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/csrf/index.php' target='_blank'>examples/csrf/index.php</a>
 
 ~~~php
 <?php
@@ -111,7 +96,7 @@ The `Pebble\Cookie` makes it easy to set a cookie from configuration:
 
 Let's say you have some configuration for setting a cookie: 
 
-[config/Auth.php](config/Auth.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config/Auth.php' target='_blank'>config/Auth.php</a>
 
 ~~~php
 <?php
@@ -127,7 +112,7 @@ return
 
 Now you can set a cookie like this: 
 
-[examples/cookie/index.php](examples/cookie/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/cookie/index.php' target='_blank'>examples/cookie/index.php</a>
 
 ~~~php
 <?php
@@ -167,7 +152,7 @@ The `Pebble\Session` is for setting the configuration of the session.
 
 You will need a configuration file like this: 
 
-[config/SessionShort.php](config/SessionShort.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config/SessionShort.php' target='_blank'>config/SessionShort.php</a>
 
 ~~~php
 <?php
@@ -185,7 +170,7 @@ return [
 
 Now we define our session from the configuration:
 
-[examples/session/index.php](examples/session/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/session/index.php' target='_blank'>examples/session/index.php</a>
 
 ~~~php
 <?php
@@ -219,7 +204,7 @@ The `Pebble\SessionTimed` will set a SESSION variable that will run out
 after exactly **a determined number of seconds**, regardless of the general lifetime of the SESSION 
 cookie: 
 
-[examples/session_timed/index.php](examples/session_timed/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/session_timed/index.php' target='_blank'>examples/session_timed/index.php</a>
 
 ~~~php
 <?php
@@ -252,7 +237,7 @@ if (!$session_timed->getValue('test')) {
 The `Pebble\File` class contains only one method which will get all files recursively 
 from a single directory (excluding '.' and '..'): 
 
-[examples/file/index.php](examples/file/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/file/index.php' target='_blank'>examples/file/index.php</a>
 
 ~~~php
 <?php
@@ -271,7 +256,7 @@ var_dump($files);
 
 A simple key / value cache. Usage: 
 
-[examples/dbcache/index.php](examples/dbcache/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/dbcache/index.php' target='_blank'>examples/dbcache/index.php</a>
 
 ~~~php
 <?php
@@ -317,7 +302,7 @@ Run the example:
 
 The `Pebble\ExceptionTrace` class gets info from an Exception as a string:
 
-[examples/exceptiontrace/index.php](examples/exceptiontrace/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/exceptiontrace/index.php' target='_blank'>examples/exceptiontrace/index.php</a>
 
 ~~~php
 <?php
@@ -347,7 +332,7 @@ try {
 The `Pebble\Headers` class has one method, that will redirect from http to https
 if the client is not already using https. 
 
-[examples/headers/index.php](examples/headers/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/headers/index.php' target='_blank'>examples/headers/index.php</a>
 
 ~~~php
 <?php
@@ -367,7 +352,7 @@ The `Pebble\JSON` class has one method which is a slightly modified version of `
 It adds the header `Content-Type: application/json`, and it throws exception on 
 encoding error. It is also possible to use a debug mode. 
 
-[examples/json/index.php](examples/json/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/json/index.php' target='_blank'>examples/json/index.php</a>
 
 ~~~php
 <?php
@@ -393,7 +378,7 @@ echo JSON::response(['some value', 'some other value']);
 
 The `Pebble\Path` class has one method which gives you the path where `vendor/` is locatated:
 
-[examples/path/index.php](examples/path/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/path/index.php' target='_blank'>examples/path/index.php</a>
 
 ~~~php
 <?php
@@ -412,7 +397,7 @@ echo Path::getBasePath();
 
 The `Pebble\Random` class has a single method that gives you a truly random string:
 
-[examples/random/index.php](examples/random/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/random/index.php' target='_blank'>examples/random/index.php</a>
 
 ~~~php
 <?php
@@ -431,7 +416,7 @@ echo Random::generateRandomString(16);
 The `Pebble\Server` class has a single method that gives you both scheme and host of 
 your server:
 
-[examples/server/index.php](examples/server/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/server/index.php' target='_blank'>examples/server/index.php</a>
 
 ~~~php
 <?php

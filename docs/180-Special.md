@@ -1,10 +1,8 @@
 ## Special
 
-
-
 The `Pebble\Special` class if used to encode HTML entities:
 
-[examples/special/index.php](examples/special/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/special/index.php' target='_blank'>examples/special/index.php</a>
 
 ~~~php
 <?php

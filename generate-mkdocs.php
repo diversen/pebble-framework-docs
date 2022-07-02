@@ -50,8 +50,9 @@ function preg_callback_insert_src($match)
 ~~~$ext
 $file
 ~~~
-EOF;
-        $link = "[$src_file]($github_base_url/$src_file)";
+EOF;    
+        $link = "<a href='$github_base_url/$src_file' target='_blank'>$src_file</a>";
+        // $link = '<a href="http://example.com/" target="_blank">example</a>';
         return $link . "\n\n" . $src_as_md;
     }
 }
@@ -108,14 +109,10 @@ function generate_output(string $file)
 
     $title = get_title($file);
 
-    // $md = "## " . "[$title](#$title)" . "\n\n";
     $md = "## " . "$title" . "\n\n";
 
     // Chapter contents
     $content = file_get_contents($file);
-
-    // Table of contents 
-    // $toc = get_toc($content);
 
     // $md .= $toc . "\n\n";
     $md .= $content;

@@ -1,12 +1,10 @@
 ## Auth
 
-
-
 The Auth instance is created using a `Pebble\DB` object and an array of `cookie settings`. 
 
 This is what the `Auth` cookie configuration, which we will use, looks like:
 
-[config/Auth.php](config/Auth.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config/Auth.php' target='_blank'>config/Auth.php</a>
 
 ~~~php
 <?php
@@ -22,7 +20,7 @@ return
 
 And now let's use our newly created Auth object in an example: 
 
-[examples/auth/index.php](examples/auth/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/auth/index.php' target='_blank'>examples/auth/index.php</a>
 
 ~~~php
 <?php

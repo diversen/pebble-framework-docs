@@ -1,7 +1,5 @@
 ## Logging
 
-
-
 There is no logging system built-in, but only a service that loads an instance
 of the [Monolog\Logger](https://github.com/Seldaek/monolog) class. 
 In order to use this service run the following composer command:
@@ -14,7 +12,7 @@ to the file `logs/main.log` file.
 If you want to alter the default logger, you can specify this in 
 the Log.php configuration file. 
 
-[config/Log.php](config/Log.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config/Log.php' target='_blank'>config/Log.php</a>
 
 ~~~php
 <?php
@@ -42,7 +40,7 @@ return [
 The logger from the configuration file writes to the default log file, 
 but also to `php://stderr`. Let's test it:
 
-[examples/logging/index.php](examples/logging/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/logging/index.php' target='_blank'>examples/logging/index.php</a>
 
 ~~~php
 <?php

@@ -1,14 +1,12 @@
 ## Template
 
-
-
 The `Pebble\Template` class is used for creating secure HTML templates. It uses the
 `Pebble\Special` class for encoding the template variables. 
 
 Let's create a main page template with the variables `$title` and `$content` in the `src/templates` dir.  
 This is the dir where all templates are placed for this project. 
 
-[src/templates/main.php](src/templates/main.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/templates/main.php' target='_blank'>src/templates/main.php</a>
 
 ~~~php
 <!DOCTYPE html>
@@ -36,7 +34,7 @@ This is the dir where all templates are placed for this project.
 We will also create a page template for showing content. We create some paragraphs
 and then we loop over each one of them.
 
-[src/templates/page.php](src/templates/page.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/templates/page.php' target='_blank'>src/templates/page.php</a>
 
 ~~~php
 <h3>Hi <?=$username?></h3>
@@ -55,7 +53,7 @@ endforeach;
 
 We add a new controller class called ` TemplateTest` in the `src` dir. 
 
-[src/TemplateTest.php](src/TemplateTest.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/TemplateTest.php' target='_blank'>src/TemplateTest.php</a>
 
 ~~~php
 <?php
@@ -96,7 +94,7 @@ class TemplateTest {
 
 Now we can tie it all together in our `index.php` file
 
-[examples/template/index.php](examples/template/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/template/index.php' target='_blank'>examples/template/index.php</a>
 
 ~~~php
 <?php

@@ -1,7 +1,5 @@
 ## ACLRole
 
-
-
 The `Pebble\ACLRole` class works almost like the `Pebble\ACL` class.  
 
 The ACLRole class extends the ACL class so it is possible to use all public
@@ -13,7 +11,7 @@ the `auth_id` of a logged in user.
 
 Let's test the ACL object in a controller. 
 
-[src/ACLRoleTestController.php](src/ACLRoleTestController.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/ACLRoleTestController.php' target='_blank'>src/ACLRoleTestController.php</a>
 
 ~~~php
 <?php
@@ -92,7 +90,7 @@ class ACLRoleTestController
 
 We execute this controller in our `index.php` file: 
 
-[examples/acl_role/index.php](examples/acl_role/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/acl_role/index.php' target='_blank'>examples/acl_role/index.php</a>
 
 ~~~php
 <?php

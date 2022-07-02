@@ -1,14 +1,12 @@
 ## AppExec
 
-
-
 The above router class showed that it is quite easy to make an
 execution environment, where any errors thrown will be caught. 
 
 There is such an app execution environment built-in and it is easy to
 use. Let's try and use the class `Pebble\AppExec` in the following example:
 
-[examples/app_exec/index.php](examples/app_exec/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/app_exec/index.php' target='_blank'>examples/app_exec/index.php</a>
 
 ~~~php
 <?php

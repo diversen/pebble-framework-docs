@@ -1,7 +1,5 @@
 ## Migration
 
-
-
 Migration creates or updates your database schema. 
 
 The `.migration` file will keep track of the current schema version, 
@@ -19,7 +17,7 @@ The down migrations are placed in [migrations/down/](migrations/down)
 
 Let's create a command for running the up migration: 
 
-[examples/migration/up.php](examples/migration/up.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/migration/up.php' target='_blank'>examples/migration/up.php</a>
 
 ~~~php
 <?php
@@ -51,7 +49,7 @@ You `.migration` file will now have version `2`.
 
 Let's also create a command for running the down migration: 
 
-[examples/migration/down.php](examples/migration/down.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/migration/down.php' target='_blank'>examples/migration/down.php</a>
 
 ~~~php
 <?php

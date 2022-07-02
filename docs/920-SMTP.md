@@ -1,7 +1,5 @@
 ## SMTP
 
-
-
 The `Pebble\SMTP` class uses the following two packages `phpmailer/phpmailer` and `erusev/parsedown` 
 
 In order to use the SMTP mail system you will have to require the following packages: 
@@ -11,7 +9,7 @@ In order to use the SMTP mail system you will have to require the following pack
 
 This is an example of the configuration used for the SMTP instance: 
 
-[config/SMTP.php](config/SMTP.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config/SMTP.php' target='_blank'>config/SMTP.php</a>
 
 ~~~php
 <?php
@@ -33,7 +31,7 @@ return [
 
 Now you can send some HTML or Markdown emails: 
 
-[examples/smtp/index.php](examples/smtp/index.php)
+<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/smtp/index.php' target='_blank'>examples/smtp/index.php</a>
 
 ~~~php
 <?php
