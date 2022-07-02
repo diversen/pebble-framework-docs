@@ -2,8 +2,10 @@
 <?php
 
 /**
- * This script generates a single README
+ * This script prepares for generating mkdocs
  */
+
+require "vendor/autoload.php";
 
 $files = [
     'src-docs/000-Setup.md',
@@ -30,6 +32,7 @@ $files = [
  */
 function preg_callback_insert_src($match)
 {
+    $github_base_url = "https://github.com/diversen/pebble-framework-docs/blob/main"; 
     $include = trim($match[1]);
     $content = explode(':', $include);
     if (trim($content[0] === 'include')) {
@@ -48,7 +51,7 @@ function preg_callback_insert_src($match)
 $file
 ~~~
 EOF;
-        $link = "[$src_file]($src_file)";
+        $link = "[$src_file]($github_base_url/$src_file)";
         return $link . "\n\n" . $src_as_md;
     }
 }
@@ -105,15 +108,16 @@ function generate_output(string $file)
 
     $title = get_title($file);
 
-    $md = "## " . $title . "\n\n";
+    // $md = "## " . "[$title](#$title)" . "\n\n";
+    $md = "## " . "$title" . "\n\n";
 
     // Chapter contents
     $content = file_get_contents($file);
 
     // Table of contents 
-    $toc = get_toc($content);
+    // $toc = get_toc($content);
 
-    $md .= $toc . "\n\n";
+    // $md .= $toc . "\n\n";
     $md .= $content;
 
     // Insert src files <!-- include: some/src/file.php -->
@@ -133,19 +137,15 @@ function generate_docs(array $files): array
     return $md_ouput;
 }
 
-
-function generate_single_readme(array $files): void
+function generate_mkdocs(array $files): void
 {
-    $readme = '';
-    // $readme .= generate_toc_readme($files);
 
     $md_output = generate_docs($files);
     foreach ($md_output as $file => $md) {
-        $readme .= "\n\n" . $md;
+        $md_basename = basename($file);
+        file_put_contents("docs/$md_basename", $md);
     }
-
-    file_put_contents('README.md', trim($readme));
 }
 
 
-generate_single_readme($files);
+generate_mkdocs($files);
