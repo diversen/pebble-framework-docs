@@ -1,0 +1,21 @@
+site_name: Pebble Framework Docs
+site_url: 'http://localhost:8000'
+theme: readthedocs
+nav:
+    - Setup: 000-Setup.md
+    - Router: 100-Router.md
+    - AppExec: 110-AppExec.md
+    - Special: 180-Special.md
+    - Template: 200-Template.md
+    - Logging: 300-Logging.md
+    - Config: 400-Config.md
+    - DB: 500-DB.md
+    - Migration: 600-Migration.md
+    - Auth: 700-Auth.md
+    - ACL: 800-ACL.md
+    - ACLRole: 900-ACLRole.md
+    - Flash: 910-Flash.md
+    - SMTP: 920-SMTP.md
+    - CLI: 922-CLI.md
+    - Misc: 930-Misc.md
+

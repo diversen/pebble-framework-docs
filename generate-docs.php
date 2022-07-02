@@ -1,6 +1,11 @@
 #!/usr/bin/env php
 <?php
 
+require "vendor/autoload.php";
+
+use Symfony\Component\Yaml\Yaml;
+use Pebble\File;
+
 $files = [
     'src-docs/000-Setup.md',
     'src-docs/100-Router.md',
@@ -101,7 +106,8 @@ function generate_output(string $file)
 
     $title = get_title($file);
 
-    $md = "## " . $title . "\n\n";
+    // $md = "## " . "[$title](#$title)" . "\n\n";
+    $md = "## " . "$title" . "\n\n";
 
     // Chapter contents
     $content = file_get_contents($file);
@@ -130,34 +136,29 @@ function generate_docs(array $files): array
 }
 
 
-function generate_single_readme(array $files): void
-{
-    $readme = '';
-    // $readme .= generate_toc_readme($files);
-
-    $md_output = generate_docs($files);
-    foreach ($md_output as $file => $md) {
-        $readme .= "\n\n" . $md;
-    }
-
-    file_put_contents('README.md', trim($readme));
-}
-
-
-generate_single_readme($files);
-
-
-// function generate_docs_folder(array $files): void
+// function generate_single_readme(array $files): void
 // {
-//     $md_toc = generate_toc($files);
-//     file_put_contents('docs/README.md', $md_toc);
+//     $readme = '';
+//     // $readme .= generate_toc_readme($files);
 
 //     $md_output = generate_docs($files);
 //     foreach ($md_output as $file => $md) {
-//         $md_basename = basename($file);
-//         file_put_contents("docs/$md_basename", $md);
+//         $readme .= "\n\n" . $md;
 //     }
+
+//     file_put_contents('README.md', trim($readme));
 // }
+
+
+function generate_docs_folder(array $files): void
+{
+
+    $md_output = generate_docs($files);
+    foreach ($md_output as $file => $md) {
+        $md_basename = basename($file);
+        file_put_contents("docs/$md_basename", $md);
+    }
+}
 
 
 // function generate_toc(array $files): string
@@ -173,4 +174,4 @@ generate_single_readme($files);
 //     return $md;
 // }
 
-// generate_docs_folder($files);
+generate_docs_folder($files);

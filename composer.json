@@ -5,7 +5,9 @@
 	"gregwar/captcha": "1.*",
         "erusev/parsedown": "^1.7",
         "phpmailer/phpmailer": "^6.6",
-        "diversen/minimal-cli-framework": "^4.0"
+        "diversen/minimal-cli-framework": "^4.0",
+        "diversen/simple-php-translation": "^3.0",
+        "symfony/yaml": "^5.4"
     },
 
     "autoload": {
