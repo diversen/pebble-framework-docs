@@ -751,7 +751,7 @@ return [
 
 Create the database if it does not exist:  
 
-    ./cli.php db --server-connect
+    ./cli.sh db --server-connect
     CREATE DATABASE `pebble`;
 
 ### Test
