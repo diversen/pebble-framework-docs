@@ -1,4 +1,5 @@
 #!/bin/sh
+bin/generate-mkdocs.php
 mkdocs build
 cp -rf site/* ../pebble-framework/docs/ 
 cd ../pebble-framework 
