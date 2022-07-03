@@ -135,3 +135,6 @@ If the right exists then you may visit [http://localhost:8000/note/read/42](http
 
 But you can never visit [http://localhost:8000/note/read/41](http://localhost:8000/note/read/41)
 (this ID can not be set)
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/800-ACL.md'>Edit this page on GitHub</a>

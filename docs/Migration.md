@@ -85,3 +85,5 @@ Your `.migration` file is now removed (version 0)
 
 Migrate up again as we will use the new database schema when using the 
 `Pebble\Auth` class.  
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/600-Migration.md'>Edit this page on GitHub</a>

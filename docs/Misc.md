@@ -129,9 +129,6 @@ $cookie_settings = $config->getSection('Auth');
 // Create cookie object
 $cookie = new Cookie($cookie_settings);
 
-// Session cookie
-// $cookie->setCookie('test', 'test', 0);
-
 // Cookie will last for 10 seconds
 if (isset($_COOKIE['test'])) {
     echo "Value of the cookie 'test': " .  $_COOKIE['test'];
@@ -270,17 +267,14 @@ $db = (new DBService())->getDB();
 
 $cache = new DBCache($db);
 
-// Try to get a result ignoreing max age
+// Try to get a result ignoring max age
 // $from_cache = $cache->get('some_key');
 
-// Get a result that is max 100 seconds old
+// Get a result that is max 10 seconds old
 $from_cache = $cache->get('some_key', 10);
 
-
-// Cache a value
-
 if (!$from_cache) {
-    echo "No result<br />";
+    echo "No cache result<br />";
     echo "Add value to key 'some_key'<br />";
     $to_cache = ['this is a test'];
     // Not set is inside an DB transaction
@@ -433,3 +427,5 @@ echo $scheme_and_host;
 
 
 ~~~
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/930-Misc.md'>Edit this page on GitHub</a>

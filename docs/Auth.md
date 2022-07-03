@@ -1,8 +1,9 @@
 ## Auth
 
+The `Pebble\Auth` class is ued to authenticate users using the database table `auth`. 
 The Auth instance is created using a `Pebble\DB` object and an array of `cookie settings`. 
 
-This is what the `Auth` cookie configuration, which we will use, looks like:
+The cookie settings could look something like this:
 
 (config/Auth.php) -&gt;
 
@@ -18,7 +19,7 @@ return
 ];
 ~~~
 
-And now let's use our newly created Auth object in an example: 
+The following example shows a test of all methods:
 
 (examples/auth/index.php) -&gt;
 
@@ -105,8 +106,10 @@ if ($auth->isVerified($email)) {
 
 ~~~
 
-You may run the Auth example:
+You may run this example:
 
     php -S localhost:8000 -t examples/auth
 
 And go to [http://localhost:8000](http://localhost:8000)
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/700-Auth.md'>Edit this page on GitHub</a>

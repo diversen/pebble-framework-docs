@@ -87,3 +87,6 @@ $smtp->setFromName('Mr Doe');
 ~~~
 
 
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/920-SMTP.md'>Edit this page on GitHub</a>

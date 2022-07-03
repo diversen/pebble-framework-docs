@@ -237,3 +237,5 @@ you should get the following response:
     Hello world helen!
     From middle_ware_2
     Current route is: /user/:username
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/100-Router.md'>Edit this page on GitHub</a>

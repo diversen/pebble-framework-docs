@@ -137,3 +137,6 @@ Visit a route that does not exist and you will get an error, e.g:
 
 Or visit a route that exists:
 [http://localhost:8000/user/Helena](http://localhost:8000/user/Helena)
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/200-Template.md'>Edit this page on GitHub</a>

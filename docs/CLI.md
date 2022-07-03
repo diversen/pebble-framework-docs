@@ -142,3 +142,6 @@ Use the built-in DB command (connect to the database):
     php examples/cli/index.php db --connect
 
 
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/922-CLI.md'>Edit this page on GitHub</a>

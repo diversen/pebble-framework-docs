@@ -126,3 +126,6 @@ You can now add the admin role on [http://localhost:8000/role/add](http://localh
 You can remove it on [http://localhost:8000/role/remove](http://localhost:8000/role/remove)
 
 If the role exists then you may visit [http://localhost:8000/admin/notes](http://localhost:8000/admin/notes)
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/900-ACLRole.md'>Edit this page on GitHub</a>

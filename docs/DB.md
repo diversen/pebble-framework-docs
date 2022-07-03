@@ -191,3 +191,6 @@ You may run the example:
     php -S localhost:8000 -t examples/database
 
 And then visit [http://localhost:8000/](http://localhost:8000/)
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/500-DB.md'>Edit this page on GitHub</a>

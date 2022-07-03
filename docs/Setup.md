@@ -11,11 +11,19 @@ Requirements
 ### Documentation examples
 
 You may clone the **pebble-framework-docs**, in order to
-easily run and edit all code examples in this documentation: 
+easily run and edit all code examples in the documentation: 
 
     git clone https://github.com/diversen/pebble-framework-docs.git 
     cd pebble-framework-docs
     composer install
+
+Notice that all classes in `src` are autoloaded as the namespace
+`App`. This is done by setting the `autoload` setting in composer.json
+to the following:     
+
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    }
 
 ### MySQL 
 
@@ -48,7 +56,7 @@ return [
 
 ### Other docker commands
 
-List containers 
+List containers
 
     docker container ls
 
@@ -63,3 +71,6 @@ Start container (mysql-server) again:
 Remove container (you will need to run the 'run' command again):
 
     docker rm mysql-server
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/000-Setup.md'>Edit this page on GitHub</a>

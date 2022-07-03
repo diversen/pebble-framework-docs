@@ -40,3 +40,7 @@ var_dump($ary_encoded);
 // }
 
 ~~~
+
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/180-Special.md'>Edit this page on GitHub</a>

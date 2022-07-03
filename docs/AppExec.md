@@ -46,8 +46,8 @@ $app_exec->run();
 
 You may add your own error controller.
 
-The only public method in `Pebble\StdErrorController` is `render`. 
-Your own error controller will need to have a `render` method. This method
+The only public method in `Pebble\App\StdErrorController` is `render`. 
+Your error controller will need to have a `render` method. This method
 has a single `param` which is an `Exception`.   
 
 The directories `config` and `config-locale` MUST exist a the same level
@@ -83,3 +83,6 @@ If you open the log file:
     more logs/main.log
 
 You will notice that a log message has been appended. 
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/110-AppExec.md'>Edit this page on GitHub</a>

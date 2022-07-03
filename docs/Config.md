@@ -81,3 +81,6 @@ You can run this example like this:
     php -S localhost:8000 -t examples/config
 
 And visit [http://localhost:8000/](http://localhost:8000/)
+
+
+<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/400-Config.md'>Edit this page on GitHub</a>
