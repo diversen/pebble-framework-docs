@@ -21,7 +21,7 @@ You may run this example:
 
     php -S localhost:8000 -t examples/logging
 
-If you visit e.g. http://localhost:8000
+If you visit e.g. [http://localhost:8000](http://localhost:8000)
 
 You will get a couple of log message in `logs/main.log`, 
 and because we use the log instance from `config/Log.php` class 

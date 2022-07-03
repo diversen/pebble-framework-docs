@@ -33,7 +33,7 @@ the username is `root` and the password is `password`.
 
 Check your database settings: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config-locale/DB.php' target='_blank'>config-locale/DB.php</a>
+(config-locale/DB.php) -&gt;
 
 ~~~php
 <?php
@@ -55,7 +55,7 @@ Create the database if it does not exist:
 
 Now we can test all methods. Most of these methods should be self-explanatory. 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/database/index.php' target='_blank'>examples/database/index.php</a>
+(examples/database/index.php) -&gt;
 
 ~~~php
 <?php

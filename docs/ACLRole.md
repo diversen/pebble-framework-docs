@@ -11,7 +11,7 @@ the `auth_id` of a logged in user.
 
 Let's test the ACL object in a controller. 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/ACLRoleTestController.php' target='_blank'>src/ACLRoleTestController.php</a>
+(src/ACLRoleTestController.php) -&gt;
 
 ~~~php
 <?php
@@ -90,7 +90,7 @@ class ACLRoleTestController
 
 We execute this controller in our `index.php` file: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/acl_role/index.php' target='_blank'>examples/acl_role/index.php</a>
+(examples/acl_role/index.php) -&gt;
 
 ~~~php
 <?php
@@ -121,8 +121,8 @@ Run this example using:
 
     php -S localhost:8000 -t examples/acl_role
 
-You can now add the admin role on http://localhost:8000/role/add
+You can now add the admin role on [http://localhost:8000/role/add](http://localhost:8000/role/add)
 
-You can remove it on http://localhost:8000/role/remove
+You can remove it on [http://localhost:8000/role/remove](http://localhost:8000/role/remove)
 
-If the role exists then you may visit http://localhost:8000/admin/notes
+If the role exists then you may visit [http://localhost:8000/admin/notes](http://localhost:8000/admin/notes)

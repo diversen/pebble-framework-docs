@@ -8,7 +8,7 @@ The pebble frameworks uses the `diversen/minimal-cli-framework` for making comma
 
 Create a command: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/CliTestCommand.php' target='_blank'>src/CliTestCommand.php</a>
+(src/CliTestCommand.php) -&gt;
 
 ~~~php
 <?php
@@ -96,7 +96,7 @@ There is few built-in commands that you can use right away.
 Let's add the  above command to a CLI program with some commands that are included
 with the `pebble-framework`. 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/cli/index.php' target='_blank'>examples/cli/index.php</a>
+(examples/cli/index.php) -&gt;
 
 ~~~php
 <?php declare (strict_types = 1);

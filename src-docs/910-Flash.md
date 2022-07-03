@@ -23,5 +23,5 @@ Run the example:
 
     php -S localhost:8000 -t examples/flash
 
-You may then visit http://localhost:8000
+You may then visit [http://localhost:8000](http://localhost:8000)
 

@@ -4,7 +4,7 @@ The Auth instance is created using a `Pebble\DB` object and an array of `cookie 
 
 This is what the `Auth` cookie configuration, which we will use, looks like:
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config/Auth.php' target='_blank'>config/Auth.php</a>
+(config/Auth.php) -&gt;
 
 ~~~php
 <?php
@@ -20,7 +20,7 @@ return
 
 And now let's use our newly created Auth object in an example: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/auth/index.php' target='_blank'>examples/auth/index.php</a>
+(examples/auth/index.php) -&gt;
 
 ~~~php
 <?php
@@ -108,3 +108,5 @@ if ($auth->isVerified($email)) {
 You may run the Auth example:
 
     php -S localhost:8000 -t examples/auth
+
+And go to [http://localhost:8000](http://localhost:8000)

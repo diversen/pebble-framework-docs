@@ -3,17 +3,18 @@
 ### Defining routes
 
 Routes are defined in controller classes, which are then connected to the router.
+There are two methods you will need to know: 
 
-There is two methods you will need to know. `addClass(Some\Controller::class)` and `run`. 
-The first method sets up some endpoints of an application and the latter method runs the application. An 
-`Exception` is thrown if an endpoint was not found. 
+* `Router::addClass(Some\Controller::class)`
+* `Router::run`
+
+The first method sets up some application endpoints and the latter method runs the application. An 
+`Exception` is thrown if no valid endpoint was found. 
 
 The router is looking for the tags `route` and `verbs` in the comments 
-of the controller classes. 
+of the controller classes. A simple controller example could look like this:
 
-A simple controller example could look like this:
-
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/SimpleHomeController.php' target='_blank'>src/SimpleHomeController.php</a>
+(src/SimpleHomeController.php) -&gt;
 
 ~~~php
 <?php
@@ -41,19 +42,19 @@ class SimpleHomeController {
 
 ~~~
 
-The above route `/` will accept the verbs GET and POST. The route
+The above route `/` will accept the verbs GET and POST and the route `/`
 will dispatch the method `index`.
 
 The second route `/user/:username` will dispatch the method `userGreeting`. 
 This method transforms the second URL segment into a string parameter, 
-which the controller method can use. This route only accepts GET requests.  
+which the controller method may use. This route only accepts GET requests.  
 
 The routes can also be made a bit more complex, like `@route /user/:username/actions/:action`
 If this route is matched, then the `$params` array will contain the keys `username` and `action`.
 
 Let's connect the above `SimpleHomeController` class to a router instance in an index.php file: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/router_simple/index.php' target='_blank'>examples/router_simple/index.php</a>
+(examples/router_simple/index.php) -&gt;
 
 ~~~php
 <?php
@@ -84,13 +85,13 @@ you should receive a response saying `Hello world helen!`
 
 ### Error handling
 
-If you visit a route which is not defined, you may get a 500 error without any useful message
+If you visit a route that is not defined, you may get a 500 error without any useful message
 (This depends on your server configuration). 
 
 We will make a setup in order to catch all errors. This will also 
 deliver a better user experience:
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/router_error/index.php' target='_blank'>examples/router_error/index.php</a>
+(examples/router_error/index.php) -&gt;
 
 ~~~php
 <?php
@@ -141,20 +142,18 @@ You will also get a better trace of the error.
 
 You can add middleware to you application. Middleware are just `callables` 
 which will be called before hitting the controller method. 
-You may specify multiple middleware `callables`. 
+You may specify multiple middleware callables. 
 
 Middleware are called in the order that they are added to your `Router` instance. 
+And the middleware callables will receive the same parameters as your controller.
 
-Middleware `callables` will receive the same `$params` as your controller.
-
-The second parameter of a `callable` is an `object`, which is passed around from middleware to middleware.
-And finally it will be sent to the controller method. 
-
-In the controller method the middleware object is also the second parameter.
+The second parameter of a callable is an `object`, which is passed from middleware to middleware.
+And finally it will be sent to the controller method. In the controller method 
+the middleware object is also the second parameter.
 
 Here is a controller where both `$params` and `$middleware_object` are used: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/HomeController.php' target='_blank'>src/HomeController.php</a>
+(src/HomeController.php) -&gt;
 
 ~~~php
 <?php
@@ -178,9 +177,9 @@ class HomeController {
 
 ~~~
 
-Then create your application like this: 
+Create an application like this: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/router_middleware/index.php' target='_blank'>examples/router_middleware/index.php</a>
+(examples/router_middleware/index.php) -&gt;
 
 ~~~php
 <?php
@@ -228,7 +227,7 @@ try {
 
 ~~~
 
-You can run this example using:
+Run this example using:
 
     php -S localhost:8000 -t examples/router_middleware
 

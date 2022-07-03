@@ -12,7 +12,7 @@ to the file `logs/main.log` file.
 If you want to alter the default logger, you can specify this in 
 the Log.php configuration file. 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config/Log.php' target='_blank'>config/Log.php</a>
+(config/Log.php) -&gt;
 
 ~~~php
 <?php
@@ -40,7 +40,7 @@ return [
 The logger from the configuration file writes to the default log file, 
 but also to `php://stderr`. Let's test it:
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/logging/index.php' target='_blank'>examples/logging/index.php</a>
+(examples/logging/index.php) -&gt;
 
 ~~~php
 <?php
@@ -64,7 +64,7 @@ You may run this example:
 
     php -S localhost:8000 -t examples/logging
 
-If you visit e.g. http://localhost:8000
+If you visit e.g. [http://localhost:8000](http://localhost:8000)
 
 You will get a couple of log message in `logs/main.log`, 
 and because we use the log instance from `config/Log.php` class 

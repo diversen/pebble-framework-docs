@@ -9,7 +9,7 @@ In order to use the SMTP mail system you will have to require the following pack
 
 This is an example of the configuration used for the SMTP instance: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/config/SMTP.php' target='_blank'>config/SMTP.php</a>
+(config/SMTP.php) -&gt;
 
 ~~~php
 <?php
@@ -31,7 +31,7 @@ return [
 
 Now you can send some HTML or Markdown emails: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/smtp/index.php' target='_blank'>examples/smtp/index.php</a>
+(examples/smtp/index.php) -&gt;
 
 ~~~php
 <?php

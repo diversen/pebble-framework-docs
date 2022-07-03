@@ -1,4 +1,4 @@
-All files in the [config/](config) folder are read first, 
+All files in the `config/` folder are read first, 
 when creating the config instance. 
 
 There is a couple of configuration files in this directory, but
@@ -9,7 +9,7 @@ and that is what the `config/App.php` file does.
 
 <!-- include: config/App.php -->
 
-Then all files in the [config-locale/](config-locale) directory are read.
+Then all files in the `config-locale/` directory are read.
 Any values in these files will override the values found in `config`.
 
 <!-- include: config-locale/App.php -->
@@ -17,7 +17,7 @@ Any values in these files will override the values found in `config`.
 Therefore: In the `config-locale` folder you should keep locale settings. 
 These settings will override the general settings in `config`. 
 
-Let's use the `App.php` configuration in a simple example, where we will be reading
+Let's use the `App.php` configuration in an example, where we will be reading
 some configuration values: 
 
 <!-- include: examples/config/index.php -->

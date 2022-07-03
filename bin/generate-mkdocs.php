@@ -9,6 +9,7 @@
 require "vendor/autoload.php";
 
 $files = [
+    'src-docs/000-index.md',
     'src-docs/000-Setup.md',
     'src-docs/100-Router.md',
     'src-docs/110-AppExec.md',
@@ -52,7 +53,8 @@ function preg_callback_insert_src($match)
 $file
 ~~~
 EOF;    
-        $link = "<a href='$github_base_url/$src_file' target='_blank'>$src_file</a>";
+        $link = "(<a href='$github_base_url/$src_file' target='_blank'>$src_file</a>)";
+        $link = "($src_file) -&gt;";
         // $link = '<a href="http://example.com/" target="_blank">example</a>';
         return $link . "\n\n" . $src_as_md;
     }
@@ -65,9 +67,10 @@ function get_title(string $file)
     $part_pats = pathinfo($file);
     $title = $part_pats['filename'];
 
-    // Remove '00-' '01-' part of filename
     $title_ary = explode('-', $title);
     $title = $title_ary[1];
+
+    if ($title === 'index') $title = 'Home';
 
     return $title;
 }

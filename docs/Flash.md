@@ -15,7 +15,7 @@ in the `$_SESSION['flash']` variable.
 Then we are redirected back to `/`, where the flash messages are 
 displayed and cleared.  
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/FlashTestController.php' target='_blank'>src/FlashTestController.php</a>
+(src/FlashTestController.php) -&gt;
 
 ~~~php
 <?php
@@ -74,7 +74,7 @@ class FlashTestController
 
 We execute this controller in our `index.php` file: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/flash/index.php' target='_blank'>examples/flash/index.php</a>
+(examples/flash/index.php) -&gt;
 
 ~~~php
 <?php
@@ -109,5 +109,5 @@ Run the example:
 
     php -S localhost:8000 -t examples/flash
 
-You may then visit http://localhost:8000
+You may then visit [http://localhost:8000](http://localhost:8000)
 

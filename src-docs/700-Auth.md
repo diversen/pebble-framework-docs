@@ -11,3 +11,5 @@ And now let's use our newly created Auth object in an example:
 You may run the Auth example:
 
     php -S localhost:8000 -t examples/auth
+
+And go to [http://localhost:8000](http://localhost:8000)

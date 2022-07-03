@@ -23,6 +23,8 @@ Run the application:
 
     php -S localhost:8000 -t examples/template
 
-Visit a route that does not exist and you will get an error, e.g: http://localhost:8000/does/not/exist
+Visit a route that does not exist and you will get an error, e.g: 
+[http://localhost:8000/does/not/exist](http://localhost:8000/does/not/exist)
 
-Or visit a route that exists: http://localhost:8000/user/Helena
+Or visit a route that exists:
+[http://localhost:8000/user/Helena](http://localhost:8000/user/Helena)

@@ -19,8 +19,8 @@ Run this example using:
 
     php -S localhost:8000 -t examples/acl_role
 
-You can now add the admin role on http://localhost:8000/role/add
+You can now add the admin role on [http://localhost:8000/role/add](http://localhost:8000/role/add)
 
-You can remove it on http://localhost:8000/role/remove
+You can remove it on [http://localhost:8000/role/remove](http://localhost:8000/role/remove)
 
-If the role exists then you may visit http://localhost:8000/admin/notes
+If the role exists then you may visit [http://localhost:8000/admin/notes](http://localhost:8000/admin/notes)

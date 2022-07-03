@@ -13,7 +13,7 @@ logged in user's `auth_id`.
 
 Let's test the ACL object in a controller. 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/src/ACLTestController.php' target='_blank'>src/ACLTestController.php</a>
+(src/ACLTestController.php) -&gt;
 
 ~~~php
 <?php
@@ -96,7 +96,7 @@ class ACLTestController
 
 We execute this controller in our `index.php` file: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/acl/index.php' target='_blank'>examples/acl/index.php</a>
+(examples/acl/index.php) -&gt;
 
 ~~~php
 <?php
@@ -127,10 +127,11 @@ Run this example using:
 
     php -S localhost:8000 -t examples/acl
 
-You can now add the access right on http://localhost:8000/rights/add
+You can now add the access right on [http://localhost:8000/rights/add](http://localhost:8000/rights/add)
 
-You can remove it on http://localhost:8000/rights/remove
+You can remove it on [http://localhost:8000/rights/remove](http://localhost:8000/rights/remove)
 
-If the right exists then you may visit http://localhost:8000/note/read/42
+If the right exists then you may visit [http://localhost:8000/note/read/42](http://localhost:8000/note/read/42)
 
-But you can never visit http://localhost:8000/note/read/41 (this ID can not be set)
+But you can never visit [http://localhost:8000/note/read/41](http://localhost:8000/note/read/41)
+(this ID can not be set)

@@ -1,23 +1,21 @@
 ## Migration
 
 Migration creates or updates your database schema. 
-
-The `.migration` file will keep track of the current schema version, 
+A `.migration` file will keep track of the current schema version, 
 so that the migration system knows what to execute.  
 
-The `up` migrations are placed in [migrations/up/](migrations/up)
+The `up` migrations are placed in `migrations/up/`.
 
-Let's load some SQL into the database. The database statements in `0001.sql` will make it possible
-to create users and to check users against an ACL system. The `0002.sql` creates a `note` table.
+Let's load some SQL into the database. The database statements in `migrations/up/0001.sql` 
+will make it possible to create users and to check users against an ACL system. 
+The `0002.sql` creates a `note` table.
 
-There is a corresponding `down` folder for migrating down. This folder
+There is a corresponding `migrations/up/down` folder for migrating down. This folder
 holds all the statements that will *undo* the up migrations. 
-
-The down migrations are placed in [migrations/down/](migrations/down)
 
 Let's create a command for running the up migration: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/migration/up.php' target='_blank'>examples/migration/up.php</a>
+(examples/migration/up.php) -&gt;
 
 ~~~php
 <?php
@@ -49,7 +47,7 @@ You `.migration` file will now have version `2`.
 
 Let's also create a command for running the down migration: 
 
-<a href='https://github.com/diversen/pebble-framework-docs/blob/main/examples/migration/down.php' target='_blank'>examples/migration/down.php</a>
+(examples/migration/down.php) -&gt;
 
 ~~~php
 <?php
