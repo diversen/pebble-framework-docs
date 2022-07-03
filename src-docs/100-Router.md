@@ -1,11 +1,13 @@
 ### Defining routes
 
 Routes are defined in controller classes, which are then connected to the router.
-When the router receives a request it checks if there is a valid route
-in any of the connected controller classes.  
+
+There is two methods you will need to know. `addClass(Some\Controller::class)` and `run`. 
+The first method sets up some endpoints of an application and the latter method runs the application. An 
+`Exception` is thrown if an endpoint was not found. 
 
 The router is looking for the tags `route` and `verbs` in the comments 
-of the controller classes.  
+of the controller classes. 
 
 A simple controller example could look like this:
 
@@ -32,7 +34,7 @@ Run the above example:
 If you visit [http://localhost:8000](http://localhost:8000),
 you should receive a response from the server saying `hello world!`
 
-If you visit http://localhost:8000/user/helen,
+If you visit [http://localhost:8000/user/helen](http://localhost:8000/user/helen),
 you should receive a response saying `Hello world helen!`
 
 ### Error handling
@@ -49,7 +51,7 @@ You may run this example:
 
     php -S localhost:8000 -t examples/router_error
 
-If you visit http://localhost:8000/does/not/exists 
+If you visit [http://localhost:8000/does/not/exists](http://localhost:8000/does/not/exists) 
 you will get a message saying `The page does not exist`
 
 You will also get a better trace of the error. 
@@ -65,7 +67,7 @@ Middleware are called in the order that they are added to your `Router` instance
 Middleware `callables` will receive the same `$params` as your controller.
 
 The second parameter of a `callable` is an `object`, which is passed around from middleware to middleware.
-Finally it will be sent to the controller method. 
+And finally it will be sent to the controller method. 
 
 In the controller method the middleware object is also the second parameter.
 
@@ -81,7 +83,7 @@ You can run this example using:
 
     php -S localhost:8000 -t examples/router_middleware
 
-If you visit http://localhost:8000/user/helen
+If you visit [http://localhost:8000/user/helen](http://localhost:8000/user/helen)
 you should get the following response: 
 
     Hello world helen!

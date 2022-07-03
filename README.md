@@ -21,6 +21,8 @@ Install mkdocs:
 
 ## Run mkdocs
 
+Live reload at [http:/localhost:9000](http://localhost:9000)
+
     mkdocs serve -a 127.0.0.1:9000
 
 ## Watch 
@@ -32,10 +34,17 @@ Install `simple-file-watch`
 
 ## Watch md-files
 
-    simple-file-watch --extension='md' --path='src-docs' --command='./generate-mkdocs.php'
+    simple-file-watch --extension='md' --path='src-docs' --command='./bin/generate-mkdocs.php'
 
-## Build
+## Build mkdocs
 
 This builds static HTML site in `site`. 
 
     mkdocs build
+
+## Build single README.md
+
+Build all documentation as a single [README-docs.md](README-docs.md) file
+
+    ./bin/generate-docs-single-file.php
+
