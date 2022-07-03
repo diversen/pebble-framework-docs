@@ -1,14 +1,15 @@
+The `Pebble\Auth` class is ued to authenticate users using the database table `auth`. 
 The Auth instance is created using a `Pebble\DB` object and an array of `cookie settings`. 
 
-This is what the `Auth` cookie configuration, which we will use, looks like:
+The cookie settings could look something like this:
 
 <!-- include: config/Auth.php -->
 
-And now let's use our newly created Auth object in an example: 
+The following example shows a test of all methods:
 
 <!-- include: examples/auth/index.php -->
 
-You may run the Auth example:
+You may run this example:
 
     php -S localhost:8000 -t examples/auth
 

@@ -9,11 +9,19 @@ Requirements
 ### Documentation examples
 
 You may clone the **pebble-framework-docs**, in order to
-easily run and edit all code examples in this documentation: 
+easily run and edit all code examples in the documentation: 
 
     git clone https://github.com/diversen/pebble-framework-docs.git 
     cd pebble-framework-docs
     composer install
+
+Notice that all classes in `src` are autoloaded as the namespace
+`App`. This is done by setting the `autoload` setting in composer.json
+to the following:     
+
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    }
 
 ### MySQL 
 
@@ -35,7 +43,7 @@ If you can not connect, then edit the database configuration file:
 
 ### Other docker commands
 
-List containers 
+List containers
 
     docker container ls
 

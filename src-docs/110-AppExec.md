@@ -8,8 +8,8 @@ use. Let's try and use the class `Pebble\AppExec` in the following example:
 
 You may add your own error controller.
 
-The only public method in `Pebble\StdErrorController` is `render`. 
-Your own error controller will need to have a `render` method. This method
+The only public method in `Pebble\App\StdErrorController` is `render`. 
+Your error controller will need to have a `render` method. This method
 has a single `param` which is an `Exception`.   
 
 The directories `config` and `config-locale` MUST exist a the same level
