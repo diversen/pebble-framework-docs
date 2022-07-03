@@ -48,13 +48,19 @@ This builds static HTML site in `site`.
 
 ## Publish docs
 
-    cp -rf site/* ../pebble-framework/docs/
+    cp -rf site/* ../pebble-framework/docs/ 
 
 ## Build single README.md
 
 Build all documentation as a single [README-docs.md](README-docs.md) file
 
     ./bin/generate-docs-single-file.php
+
+## Commit to docs/
+
+copy to pebble-framework/docs and commit
+
+    ./bin/commit.sh
 
 
 
