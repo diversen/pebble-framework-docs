@@ -89,7 +89,9 @@ function generate_output(string $file)
     $md .= $content;
 
     // Insert src files <!-- include: some/src/file.php -->
-    $md = preg_replace_callback('/<!--(.*)-->/Uis', 'preg_callback_insert_src', $md);
+    $md = preg_replace_callback('/<!--(.*)-->/Uis', 'preg_callback_insert_src', $md) . "\n\n";
+
+    $md.= "<hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/$file'>Edit this page on GitHub</a>";
 
     return $md;
 }
