@@ -1,3 +1,9 @@
+# About 
+
+This is the documentation for the [pebble-framework](https://github.com/diversen/pebble-framework)
+
+The framework aims at being as simple as possible but no simpler than that. 
+
 # Build
 
 This documentation is built using [mkdocs](https://www.mkdocs.org/)
