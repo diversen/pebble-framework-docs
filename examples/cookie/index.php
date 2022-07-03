@@ -12,9 +12,6 @@ $cookie_settings = $config->getSection('Auth');
 // Create cookie object
 $cookie = new Cookie($cookie_settings);
 
-// Session cookie
-// $cookie->setCookie('test', 'test', 0);
-
 // Cookie will last for 10 seconds
 if (isset($_COOKIE['test'])) {
     echo "Value of the cookie 'test': " .  $_COOKIE['test'];
