@@ -3,7 +3,7 @@
 The `Pebble\Template` class is used for creating secure HTML templates. It uses the
 `Pebble\Special` class for encoding the template variables. 
 
-Let's create a main page template with the variables `$title` and `$content` in the `src/templates` dir.  
+Let's create a main page template with the variables `$title` and `$content` in the `src/templates` dir.
 This is the dir where all templates are placed for this project. 
 
 (src/templates/main.php) -&gt;
