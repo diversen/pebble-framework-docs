@@ -21,3 +21,6 @@ nav:
     - Misc: Misc.md
 markdown_extensions:
     - footnotes
+plugins:
+    - search
+    - alternate-link

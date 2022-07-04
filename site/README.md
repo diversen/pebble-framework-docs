@@ -1,1 +1,1 @@
-contains static output from mkdocs
+# static output from mkdocs
