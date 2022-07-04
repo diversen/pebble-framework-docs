@@ -25,26 +25,22 @@ Install mkdocs:
 
     pip install mkdocs
 
-## Run mkdocs
+## Watch
 
 Live reload at [http:/localhost:9000](http://localhost:9000)
 
     mkdocs serve -a 127.0.0.1:9000
 
-## Watch
-
 Watch changes in markdown files. PHP files are included in the markdown docs. 
+
 Install `simple-file-watch`
 
     npm install -g simple-file-watch
-
-## Watch md-files
-
     simple-file-watch --extension='md' --path='src-docs' --command='./bin/generate-mkdocs.php'
 
 ## Edit src files
 
-Just edit files in [src-docs](src-docs)
+Edit files in [src-docs](src-docs)
 
 ## Build mkdocs
 
@@ -52,19 +48,19 @@ This builds static HTML site in `site`.
 
     mkdocs build
 
-## Publish docs
-
-    cp -rf site/* ../pebble-framework/docs/ 
-
 ## Build single README.md
 
-Build all documentation as a single [README-docs.md](README-docs.md) file
+Build all documentation as a single [README-docs.md](README-docs.md) file.
+This is not using mkdocs
 
     ./bin/generate-docs-single-file.php
 
 ## Commit to docs/
 
-copy to pebble-framework/docs and commit
+Shorthand command:
+
+This will update markdown files, insert php code in .md files, build mkdocs,
+copy to pebble-framework/docs, and commit with the message 'docs' 
 
     ./bin/commit.sh
 
