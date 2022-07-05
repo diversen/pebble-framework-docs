@@ -1,5 +1,3 @@
-## DB
-
 The `Pebble\DB` class should work with any database, but in this documentation we will stick with a MySQL database. It is also the only database that has a `schema` containing tables for `Pebble\Auth`, `Pebble\ACL`, and `Pebble\ACLRole`. For instruction on running MySQL you may refer to [Setup MySQL](Setup#mysql) 
 
 ### Usage

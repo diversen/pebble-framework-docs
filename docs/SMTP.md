@@ -1,5 +1,3 @@
-## SMTP
-
 The `Pebble\SMTP` class uses the following two packages `phpmailer/phpmailer` and `erusev/parsedown` 
 
 In order to use the SMTP mail system you will have to require the following packages: 

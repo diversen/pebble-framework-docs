@@ -6,8 +6,12 @@ Markdown==3.3.7
 MarkupSafe==2.1.1
 mergedeep==1.3.4
 mkdocs==1.3.0
-mkdocs-altlink-plugin @ git+https://github.com/cmitu/mkdocs-altlink-plugin/@62f6be91a0bf5eca65ac07362c1043994c6a50b5
+mkdocs-altlink-plugin==1.0.1
+mkdocs-material==8.3.9
+mkdocs-material-extensions==1.0.3
 packaging==21.3
+Pygments==2.12.0
+pymdown-extensions==9.5
 pyparsing==3.0.9
 python-dateutil==2.8.2
 PyYAML==6.0

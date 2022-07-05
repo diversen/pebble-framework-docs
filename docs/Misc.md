@@ -1,5 +1,3 @@
-## Misc
-
 This part show other small classes you can use:
 
 ### Captcha

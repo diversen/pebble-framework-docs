@@ -1,5 +1,3 @@
-## ACL
-
 An access control list (ACL) is a list of rules that specifies which users or systems 
 are granted or denied access to a particular object or system resource.
 

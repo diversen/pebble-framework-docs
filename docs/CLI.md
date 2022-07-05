@@ -1,5 +1,3 @@
-## CLI
-
 The pebble frameworks uses the `diversen/minimal-cli-framework` for making command line programs. 
 
     composer require diversen/minimal-cli-framework

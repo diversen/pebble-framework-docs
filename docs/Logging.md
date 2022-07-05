@@ -1,5 +1,3 @@
-## Logging
-
 There is no logging system built-in, but only a service that loads an instance
 of the [Monolog\Logger](https://github.com/Seldaek/monolog) class.
 In order to use this service run the following composer command:

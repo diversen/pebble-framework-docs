@@ -80,13 +80,13 @@ function generate_output(string $file)
 
     $title = get_title($file);
 
-    $md = "## " . "$title" . "\n\n";
+    // $md = "## " . "$title" . "\n\n";
 
     // Chapter contents
     $content = file_get_contents($file);
 
     // $md .= $toc . "\n\n";
-    $md .= $content;
+    $md = $content;
 
     // Insert src files <!-- include: some/src/file.php -->
     $md = preg_replace_callback('/<!--(.*)-->/Uis', 'preg_callback_insert_src', $md) . "\n\n";

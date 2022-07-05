@@ -1,5 +1,3 @@
-## Flash
-
 Flash messages are messages that are displayed to the client -
 usually after some action has been performed. 
 

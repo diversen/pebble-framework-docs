@@ -1,5 +1,3 @@
-## Router
-
 ### Defining routes
 
 Routes are defined in controller classes, which are then connected to the router.

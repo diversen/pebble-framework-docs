@@ -1,5 +1,3 @@
-## AppExec
-
 The above router class showed that it is quite easy to make an
 execution environment, where any errors thrown will be caught. 
 

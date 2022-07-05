@@ -1,5 +1,3 @@
-## ACLRole
-
 The `Pebble\ACLRole` class works almost like the `Pebble\ACL` class.  
 
 The ACLRole class extends the ACL class so it is possible to use all public

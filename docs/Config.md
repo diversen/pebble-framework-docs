@@ -1,5 +1,3 @@
-## Config
-
 All files in the `config/` folder are read first, 
 when creating the config instance. 
 

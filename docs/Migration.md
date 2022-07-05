@@ -1,5 +1,3 @@
-## Migration
-
 Migration creates or updates your database schema. 
 A `.migration` file will keep track of the current schema version, 
 so that the migration system knows what to execute.  

@@ -1,5 +1,3 @@
-## Setup
-
 Requirements
 
     PHP >= 7.4.3

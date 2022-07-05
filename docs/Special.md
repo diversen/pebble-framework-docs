@@ -1,5 +1,3 @@
-## Special
-
 The `Pebble\Special` class if used to encode HTML entities:
 
 (examples/special/index.php) -&gt;
