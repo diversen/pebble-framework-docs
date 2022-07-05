@@ -2,8 +2,7 @@ site_name: Pebble Framework
 site_url: 'http://localhost:8000'
 theme: material
 nav:
-    - Home: index.md
-    - Setup: Setup.md
+    - Setup / Install: index.md
     - Router: Router.md
     - AppExec: AppExec.md
     - Special: Special.md

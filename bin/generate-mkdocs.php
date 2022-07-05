@@ -10,7 +10,6 @@ require "vendor/autoload.php";
 
 $files = [
     'src-docs/000-index.md',
-    'src-docs/000-Setup.md',
     'src-docs/100-Router.md',
     'src-docs/110-AppExec.md',
     'src-docs/180-Special.md',
