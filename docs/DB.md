@@ -1,36 +1,8 @@
 ## DB
 
-The `Pebble\DB` class should work with any database, but in this documentation 
-we will stick with the MySQL database. If you don't have access to a MySQL database, 
-then it is quite easy to run a docker MySQL server instance. See
-[Setup/MySQL](Setup#mysql) 
+The `Pebble\DB` class should work with any database, but in this documentation we will stick with a MySQL database. It is also the only database that has a `schema` containing tables for `Pebble\Auth`, `Pebble\ACL`, and `Pebble\ACLRole`. For instruction on running MySQL you may refer to [Setup MySQL](Setup#mysql) 
 
-### Connect
-
-The default `config/DB.php` file should work with above docker settings, where 
-the username is `root` and the password is `password`.
-
-Check your database settings: 
-
-(config-locale/DB.php) -&gt;
-
-~~~php
-<?php
-
-return [
-	'url' => 'mysql:host=127.0.0.1;dbname=pebble',
-	'username' => 'root',
-	'password' => 'password',
-];
-
-~~~
-
-Create the database if it does not exist:  
-
-    ./cli.sh db --server-connect
-    CREATE DATABASE `pebble`;
-
-### Test
+### Usage
 
 Now we can test all methods. Most of these methods should be self-explanatory. 
 
@@ -170,6 +142,9 @@ You may run the example:
     php -S localhost:8000 -t examples/database
 
 And then visit [http://localhost:8000/](http://localhost:8000/)
+
+
+
 
 
 <hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/500-DB.md'>Edit this page on GitHub</a>

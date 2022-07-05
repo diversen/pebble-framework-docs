@@ -2,14 +2,10 @@
 
 require_once "../../vendor/autoload.php";
 
-use Pebble\Service\AuthService;
 use Pebble\App\AppBase;
 
 $app_base = new AppBase();
 $app_base->setErrorHandler();
-
-// Get auth instance. Use the service class
-$auth = (new AuthService())->getAuth();
 
 // Or use AppBase class
 $auth = (new AppBase())->getAuth();

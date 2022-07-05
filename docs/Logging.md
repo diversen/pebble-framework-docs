@@ -1,7 +1,7 @@
 ## Logging
 
 There is no logging system built-in, but only a service that loads an instance
-of the [Monolog\Logger](https://github.com/Seldaek/monolog) class. 
+of the [Monolog\Logger](https://github.com/Seldaek/monolog) class.
 In order to use this service run the following composer command:
 
     composer require monolog/monolog
@@ -10,7 +10,7 @@ Without any configuration, the default logger writes log messages
 to the file `logs/main.log` file.
 
 If you want to alter the default logger, you can specify this in 
-the Log.php configuration file. 
+a `Log.php` configuration file. 
 
 (config/Log.php) -&gt;
 
@@ -37,7 +37,7 @@ return [
 
 ~~~
 
-The logger from the configuration file writes to the default log file, 
+The logger from the above configuration file writes to the default log file, 
 but also to `php://stderr`. Let's test it:
 
 (examples/logging/index.php) -&gt;
@@ -52,12 +52,22 @@ use Pebble\Service\LogService;
 
 // You can get a log instance from AppBase
 $log = (new AppBase())->getLog();
-$log->debug('Some debug message');
+
+// Just a message
+$log->debug('Debug message');
+
+// Add some more info as an array
+$log->debug('Debug message', ['info' => 'Debug info', 'URL' => $_SERVER['REQUEST_URI']]);
 
 // Or you can get a log instance from LogService
 // (It is the same instance you will get)
 $log = (new LogService())->getLog();
-$log->error('Some error message');
+
+// Just a message
+$log->error('Error message');
+
+// Add some more info as an array
+$log->error('Error message', ['info' => 'Error info', 'URL' => $_SERVER['REQUEST_URI']]);
 ~~~
 
 You may run this example:
@@ -70,5 +80,6 @@ You will get a couple of log message in `logs/main.log`,
 and because we use the log instance from `config/Log.php` class 
 the same messages are written to `php://stderr`.
 
+For more information visit [Monolog\Logger](https://github.com/Seldaek/monolog).
 
 <hr /><a href='https://github.com/diversen/pebble-framework-docs/blob/main/src-docs/300-Logging.md'>Edit this page on GitHub</a>

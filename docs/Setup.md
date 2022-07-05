@@ -4,33 +4,29 @@ Requirements
 
     PHP >= 7.4.3
 
-### As a dependency in a project:
+Install as dependency
 
     composer require diversen/pebble-framework
 
 ### Documentation examples
 
-You may clone the **pebble-framework-docs**, in order to
-easily run and edit all code examples in the documentation: 
+You may clone the pebble-framework-docs in order to easily run and edit all code examples in this documentation: 
 
     git clone https://github.com/diversen/pebble-framework-docs.git 
     cd pebble-framework-docs
     composer install
 
-Notice that all classes in `src` are autoloaded as the namespace
-`App`. This is done by setting the `autoload` setting in composer.json
-to the following:     
+Notice that all classes in `src` are autoloaded as the namespace `App`. This is done by setting the `autoload` setting in composer.json to the following:     
 
     "autoload": {
         "psr-4": {"App\\": "src/"}
     }
 
-### MySQL 
+If you want to run all code examples you will need access to a MySQL database. 
 
-The documentation uses MySQL. If you want to run all code examples
-you will need access to a MySQL database. 
+### Docker MySQL  
 
-Install (run) a MySQL image that will work:
+If you don't have access to a MySQL database you may install a MySQL docker image that will work. The `root` user is given the password `password` in the following install:
 
     docker run -p 3306:3306 --name mysql-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.7
 

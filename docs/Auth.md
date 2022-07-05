@@ -1,7 +1,6 @@
 ## Auth
 
-The `Pebble\Auth` class is ued to authenticate users using the database table `auth`. 
-The Auth instance is created using a `Pebble\DB` object and an array of `cookie settings`. 
+The `Pebble\Auth` class is used to authenticate users using the database table `auth`. The Auth instance is created using a `Pebble\DB` object and an array of `cookie settings`. 
 
 The cookie settings could look something like this:
 
@@ -28,14 +27,10 @@ The following example shows a test of all methods:
 
 require_once "../../vendor/autoload.php";
 
-use Pebble\Service\AuthService;
 use Pebble\App\AppBase;
 
 $app_base = new AppBase();
 $app_base->setErrorHandler();
-
-// Get auth instance. Use the service class
-$auth = (new AuthService())->getAuth();
 
 // Or use AppBase class
 $auth = (new AppBase())->getAuth();
