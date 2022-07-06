@@ -52,8 +52,8 @@ function preg_callback_insert_src($match)
 $file
 ~~~
 EOF;    
-        $link = "(<a href='$github_base_url/$src_file' target='_blank'>$src_file</a>)";
-        $link = "($src_file) -&gt;";
+        $link = "<a href='$github_base_url/$src_file' target='_blank'>$src_file</a>)";
+        $link = "```$src_file ->```";
         // $link = '<a href="http://example.com/" target="_blank">example</a>';
         return $link . "\n\n" . $src_as_md;
     }
@@ -118,4 +118,7 @@ function generate_mkdocs(array $files): void
 }
 
 
+echo "Generating new docs";
+
 generate_mkdocs($files);
+exit(0);
