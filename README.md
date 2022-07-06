@@ -2,13 +2,11 @@
 
 This is the documentation for the [pebble-framework](https://github.com/diversen/pebble-framework)
 
-The framework aims at being as simple as possible but no simpler than that. 
-
 # Build
 
 This documentation is built using [mkdocs](https://www.mkdocs.org/)
 
-## Install: mkdocs
+## Install
 
     git clone git@github.com:diversen/pebble-framework-docs.git
     cd pebble-framework-docs.git
@@ -29,14 +27,23 @@ Install mkdocs:
 
 Live reload at [http:/localhost:9000](http://localhost:9000)
 
+Watch changes in `docs`:
+
     mkdocs serve -a 127.0.0.1:9000
 
-Watch changes in markdown files. PHP files are included in the markdown docs. 
+Watch changes in `examples/`, `src`, and `src-docs/`:
 
 Install `simple-file-watch`
 
     npm install -g simple-file-watch
-    simple-file-watch --extension='md' --path='src-docs' --command='./bin/generate-mkdocs.php'
+    simple-file-watch --extension='md,php' --path='examples' --path='src-docs' --path='src' --command='./bin/generate-mkdocs.php'
+
+## Watch shortcut
+
+If the mkdocs and simple-file-watch are installed, you may run: 
+
+    source venv/bin/activate
+    ./bin/serve.sh
 
 ## Edit src files
 
@@ -44,7 +51,7 @@ Edit files in [src-docs](src-docs)
 
 ## Build mkdocs
 
-This builds static HTML site in `site`. 
+This builds a static HTML site in `site`. 
 
     mkdocs build
 
@@ -63,6 +70,3 @@ This will update markdown files, insert php code in .md files, build mkdocs,
 copy to pebble-framework/docs, and commit with the message 'docs' 
 
     ./bin/commit.sh
-
-
-
