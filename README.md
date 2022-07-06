@@ -21,7 +21,7 @@ Activate virtualenv:
 
 Install mkdocs:
 
-    pip install mkdocs
+    pip install -r requirements.txt
 
 ## Watch
 
