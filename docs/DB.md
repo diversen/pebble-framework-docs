@@ -4,7 +4,7 @@ The `Pebble\DB` class should work with any database, but in this documentation w
 
 Now we can test all methods. Most of these methods should be self-explanatory. 
 
-(examples/database/index.php) -&gt;
+```examples/database/index.php ->```
 
 ~~~php
 <?php

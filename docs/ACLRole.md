@@ -9,7 +9,7 @@ the `auth_id` of a logged in user.
 
 Let's test the ACL object in a controller. 
 
-(src/ACLRoleTestController.php) -&gt;
+```src/ACLRoleTestController.php ->```
 
 ~~~php
 <?php
@@ -88,7 +88,7 @@ class ACLRoleTestController
 
 We execute this controller in our `index.php` file: 
 
-(examples/acl_role/index.php) -&gt;
+```examples/acl_role/index.php ->```
 
 ~~~php
 <?php

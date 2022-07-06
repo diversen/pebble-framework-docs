@@ -7,7 +7,7 @@ In order to use the SMTP mail system you will have to require the following pack
 
 This is an example of the configuration used for the SMTP instance: 
 
-(config/SMTP.php) -&gt;
+```config/SMTP.php ->```
 
 ~~~php
 <?php
@@ -29,7 +29,7 @@ return [
 
 Now you can send some HTML or Markdown emails: 
 
-(examples/smtp/index.php) -&gt;
+```examples/smtp/index.php ->```
 
 ~~~php
 <?php

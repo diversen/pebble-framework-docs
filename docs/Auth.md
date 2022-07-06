@@ -2,7 +2,7 @@ The `Pebble\Auth` class is used to authenticate users using the database table `
 
 The cookie settings could look something like this:
 
-(config/Auth.php) -&gt;
+```config/Auth.php ->```
 
 ~~~php
 <?php
@@ -18,7 +18,7 @@ return
 
 The following example shows a test of all methods:
 
-(examples/auth/index.php) -&gt;
+```examples/auth/index.php ->```
 
 ~~~php
 <?php

@@ -10,7 +10,7 @@ to the file `logs/main.log` file.
 If you want to alter the default logger, you can specify this in 
 a `Log.php` configuration file. 
 
-(config/Log.php) -&gt;
+```config/Log.php ->```
 
 ~~~php
 <?php
@@ -38,7 +38,7 @@ return [
 The logger from the above configuration file writes to the default log file, 
 but also to `php://stderr`. Let's test it:
 
-(examples/logging/index.php) -&gt;
+```examples/logging/index.php ->```
 
 ~~~php
 <?php

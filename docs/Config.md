@@ -7,7 +7,7 @@ we will just focus on the `App.php` file.
 Any configuration file being used, should return an assoc array with key names and values, 
 and that is what the `config/App.php` file does. 
 
-(config/App.php) -&gt;
+```config/App.php ->```
 
 ~~~php
 <?php
@@ -21,7 +21,7 @@ return [
 Then all files in the `config-locale/` directory are read.
 Any values in these files will override the values found in `config`.
 
-(config-locale/App.php) -&gt;
+```config-locale/App.php ->```
 
 ~~~php
 <?php
@@ -38,7 +38,7 @@ These settings will override the general settings in `config`.
 Let's use the `App.php` configuration in an example, where we will be reading
 some configuration values: 
 
-(examples/config/index.php) -&gt;
+```examples/config/index.php ->```
 
 ~~~php
 <?php

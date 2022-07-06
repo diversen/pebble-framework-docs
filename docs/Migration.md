@@ -13,7 +13,7 @@ holds all the statements that will *undo* the up migrations.
 
 Let's create a command for running the up migration: 
 
-(examples/migration/up.php) -&gt;
+```examples/migration/up.php ->```
 
 ~~~php
 <?php
@@ -45,7 +45,7 @@ You `.migration` file will now have version `2`.
 
 Let's also create a command for running the down migration: 
 
-(examples/migration/down.php) -&gt;
+```examples/migration/down.php ->```
 
 ~~~php
 <?php

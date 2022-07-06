@@ -9,7 +9,7 @@ You need to install this package, e.g. using composer:
 
 Usage:
 
-(examples/captcha/index.php) -&gt;
+```examples/captcha/index.php ->```
 
 ~~~php
 <?php
@@ -46,7 +46,7 @@ For implementation you may look at [this stackoverflow answer](https://stackover
 
 Usage:
 
-(examples/csrf/index.php) -&gt;
+```examples/csrf/index.php ->```
 
 ~~~php
 <?php
@@ -94,7 +94,7 @@ The `Pebble\Cookie` makes it easy to set a cookie from configuration:
 
 Let's say you have some configuration for setting a cookie: 
 
-(config/Auth.php) -&gt;
+```config/Auth.php ->```
 
 ~~~php
 <?php
@@ -110,7 +110,7 @@ return
 
 Now you can set a cookie like this: 
 
-(examples/cookie/index.php) -&gt;
+```examples/cookie/index.php ->```
 
 ~~~php
 <?php
@@ -147,7 +147,7 @@ The `Pebble\Session` is for setting the configuration of the session.
 
 You will need a configuration file like this: 
 
-(config/SessionShort.php) -&gt;
+```config/SessionShort.php ->```
 
 ~~~php
 <?php
@@ -165,7 +165,7 @@ return [
 
 Now we define our session from the configuration:
 
-(examples/session/index.php) -&gt;
+```examples/session/index.php ->```
 
 ~~~php
 <?php
@@ -199,7 +199,7 @@ The `Pebble\SessionTimed` will set a SESSION variable that will run out
 after exactly **a determined number of seconds**, regardless of the general lifetime of the SESSION 
 cookie: 
 
-(examples/session_timed/index.php) -&gt;
+```examples/session_timed/index.php ->```
 
 ~~~php
 <?php
@@ -232,7 +232,7 @@ if (!$session_timed->getValue('test')) {
 The `Pebble\File` class contains only one method which will get all files recursively 
 from a single directory (excluding '.' and '..'): 
 
-(examples/file/index.php) -&gt;
+```examples/file/index.php ->```
 
 ~~~php
 <?php
@@ -251,7 +251,7 @@ var_dump($files);
 
 A simple key / value cache. Usage: 
 
-(examples/dbcache/index.php) -&gt;
+```examples/dbcache/index.php ->```
 
 ~~~php
 <?php
@@ -294,7 +294,7 @@ Run the example:
 
 The `Pebble\ExceptionTrace` class gets info from an Exception as a string:
 
-(examples/exceptiontrace/index.php) -&gt;
+```examples/exceptiontrace/index.php ->```
 
 ~~~php
 <?php
@@ -324,7 +324,7 @@ try {
 The `Pebble\Headers` class has one method, that will redirect from http to https
 if the client is not already using https. 
 
-(examples/headers/index.php) -&gt;
+```examples/headers/index.php ->```
 
 ~~~php
 <?php
@@ -344,7 +344,7 @@ The `Pebble\JSON` class has one method which is a slightly modified version of `
 It adds the header `Content-Type: application/json`, and it throws exception on 
 encoding error. It is also possible to use a debug mode. 
 
-(examples/json/index.php) -&gt;
+```examples/json/index.php ->```
 
 ~~~php
 <?php
@@ -370,7 +370,7 @@ echo JSON::response(['some value', 'some other value']);
 
 The `Pebble\Path` class has one method which gives you the path where `vendor/` is locatated:
 
-(examples/path/index.php) -&gt;
+```examples/path/index.php ->```
 
 ~~~php
 <?php
@@ -389,7 +389,7 @@ echo Path::getBasePath();
 
 The `Pebble\Random` class has a single method that gives you a truly random string:
 
-(examples/random/index.php) -&gt;
+```examples/random/index.php ->```
 
 ~~~php
 <?php
@@ -408,7 +408,7 @@ echo Random::generateRandomString(16);
 The `Pebble\Server` class has a single method that gives you both scheme and host of 
 your server:
 
-(examples/server/index.php) -&gt;
+```examples/server/index.php ->```
 
 ~~~php
 <?php

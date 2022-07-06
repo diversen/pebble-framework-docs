@@ -11,7 +11,7 @@ logged in user's `auth_id`.
 
 Let's test the ACL object in a controller. 
 
-(src/ACLTestController.php) -&gt;
+```src/ACLTestController.php ->```
 
 ~~~php
 <?php
@@ -94,7 +94,7 @@ class ACLTestController
 
 We execute this controller in our `index.php` file: 
 
-(examples/acl/index.php) -&gt;
+```examples/acl/index.php ->```
 
 ~~~php
 <?php

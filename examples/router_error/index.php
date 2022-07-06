@@ -14,7 +14,7 @@ $app_base = new AppBase();
 $app_base->setErrorHandler();
 
 try {
-
+    
     $router = new Router();
     $router->addClass(App\SimpleHomeController::class);
     $router->run();

@@ -13,7 +13,7 @@ in the `$_SESSION['flash']` variable.
 Then we are redirected back to `/`, where the flash messages are 
 displayed and cleared.  
 
-(src/FlashTestController.php) -&gt;
+```src/FlashTestController.php ->```
 
 ~~~php
 <?php
@@ -72,7 +72,7 @@ class FlashTestController
 
 We execute this controller in our `index.php` file: 
 
-(examples/flash/index.php) -&gt;
+```examples/flash/index.php ->```
 
 ~~~php
 <?php

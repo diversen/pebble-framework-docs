@@ -4,7 +4,7 @@ execution environment, where any errors thrown will be caught.
 There is such an app execution environment built-in and it is easy to
 use. Let's try and use the class `Pebble\AppExec` in the following example:
 
-(examples/app_exec/index.php) -&gt;
+```examples/app_exec/index.php ->```
 
 ~~~php
 <?php

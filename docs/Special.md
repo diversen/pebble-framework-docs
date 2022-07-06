@@ -1,6 +1,6 @@
 The `Pebble\Special` class if used to encode HTML entities:
 
-(examples/special/index.php) -&gt;
+```examples/special/index.php ->```
 
 ~~~php
 <?php
