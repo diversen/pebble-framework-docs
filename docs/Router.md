@@ -3,13 +3,12 @@
 Routes are defined in controller classes, which are then connected to the router.
 There are two methods you will need to know: 
 
-* `Router::addClass(Some\Controller::class)`
-* `Router::run`
+* `Router::addClass(App\HomeController::class)`
+* `Router::run()`
 
 The first method sets up some application endpoints and the latter method runs the application. An `Exception` is thrown if no valid endpoint is found. 
 
-The router instance is looking for the tags `route` and `verbs` in the comments 
-of the controller classes. A simple controller example could look like this:
+The router instance is looking for the tags `route` and `verbs` in the comments of the controller classes. A simple controller example could look like this:
 
 ```src/SimpleHomeController.php ->```
 
@@ -130,8 +129,7 @@ You will also get a better trace of the error.
 
 You may add middleware to you application. Middleware are just `callables` which will be called before hitting the controller method. You may specify multiple middleware callables. 
 
-Middleware are called in the order that they are added to your `Router` instance. 
-And the middleware callables will receive the same parameters as your controller.
+Middleware are called in the order that they are added to your `Router` instance. And the middleware callables will receive the same parameters as your controller.
 
 The second parameter of a callable is an `object`, which is passed from middleware to middleware. And finally it will be sent to the controller method. In the controller method the middleware object is also the second parameter.
 

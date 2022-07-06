@@ -9,8 +9,9 @@ use Pebble\Router;
 
 $app_exec = new AppExec();
 
-// This is the default error controller. You may set your own error controller
-// $app_exec->setErrorController(StdErrorController::class);
+// This is the default error controller. 
+// You may set your own error controller, e.g. like this: 
+// $app_exec->setErrorController(App\ErrorController::class);
 
 // Create an app to be executed. It does not need to extend AppBase
 // But AppBase has some nice utility methods

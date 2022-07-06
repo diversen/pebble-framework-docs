@@ -25,6 +25,8 @@ class TemplateTest {
         // They are safe to output to the client
         $variables['content'] = Template::getOutput('templates/page.php', $variables);
 
+        
+
         // All variables are already encoded, 
         // Therefor we render this template without encoding (renderRaw)
         Template::renderRaw('templates/main.php', $variables);

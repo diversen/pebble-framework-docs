@@ -1,6 +1,14 @@
-The `Pebble\Template` class is used for creating secure HTML templates. It uses the `Pebble\Special` class for encoding the template variables. 
+The `Pebble\Template` class is used for creating secure HTML templates. It uses the `Pebble\Special` class for encoding the template variables. Every HTML entity is encoded by default. 
 
-Let's create a main page template with the variables `$title` and `$content` in the `src/templates` dir. This is the dir where all templates are placed for this project. 
+The class has four methods: 
+
+* `Template::getOutput($variables_ary, 'path/to/template.php')`. Return output of a template as a string
+* `Template::getOutputRaw($variables_ary, 'path/to/template.php')`. Return output of a template as a string with no encoding
+* `Template::render($variables_ary, 'path/to/template.php')`. Output the parsed templates directly to stdout (e.g. the browser).
+* `Template::renderRaw($variables_ary, 'path/to/template.php')`.  Output the parsed templates directly to stdout (e.g. the browser) with no encoding.
+
+
+Let's create a main page template with the variables `$title` and `$content` in the `src/templates` dir. This is the dir where all templates are placed for the examples. 
 
 ```src/templates/main.php ->```
 
@@ -77,6 +85,8 @@ class TemplateTest {
         // All the variables with HTML specialchars will be auto-encoded, 
         // They are safe to output to the client
         $variables['content'] = Template::getOutput('templates/page.php', $variables);
+
+        
 
         // All variables are already encoded, 
         // Therefor we render this template without encoding (renderRaw)

@@ -2,7 +2,11 @@ The above router class showed that it is quite easy to make an
 execution environment, where any errors thrown will be caught. 
 
 There is such an app execution environment built-in and it is easy to
-use. Let's try and use the class `Pebble\AppExec` in the following example:
+use, but you will need the [Monolog](https://github.com/Seldaek/monolog) package. This is used for writing log messages:
+
+    composer require monolog/monolog
+
+Now let's try and use the class `Pebble\AppExec` in the following example:
 
 <!-- include: examples/app_exec/index.php -->
 
@@ -12,7 +16,7 @@ The only public method in `Pebble\App\StdErrorController` is `render`.
 Your error controller will need to have a `render` method. This method
 has a single `param` which is an `Exception`.   
 
-The directories `config` and `config-locale` MUST exist a the same level
+The directories `config` and `config-locale` MUST exist at the same level
 as the composer `vendor` dir. The `logs` dir will be created automatically
 when the first log message is written. This is also created at the same level
 as the `vendor` dir. So this is the directory structure: 
@@ -21,11 +25,6 @@ as the `vendor` dir. So this is the directory structure:
     config-locale/
     vendor/
     logs/
-
-You will need the [Monolog](https://github.com/Seldaek/monolog) package. 
-This is used for writing the log messages:
-
-    composer require monolog/monolog
 
 Run the example:
 
