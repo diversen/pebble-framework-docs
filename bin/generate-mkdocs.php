@@ -113,7 +113,7 @@ function generate_mkdocs(array $files): void
     foreach ($md_output as $file => $md) {
         $md_basename = basename($file);
         [, $title] = explode('-', $md_basename);
-        file_put_contents("docs/$title", $md);
+        file_put_contents("mkdocs/$title", $md);
     }
 }
 

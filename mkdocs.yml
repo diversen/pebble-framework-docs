@@ -1,6 +1,7 @@
 site_name: Pebble Framework
 site_url: 'http://localhost:8000'
 theme: material
+docs_dir: mkdocs
 nav:
     - Setup / Install: index.md
     - Router: Router.md
