@@ -23,11 +23,11 @@ Install mkdocs:
 
     pip install -r requirements.txt
 
-Install simple-file-watch (for adding changed php files to source code):
+Install simple-file-watch (for adding changed php files to mkdocs):
 
     npm install -g simple-file-watch
 
-## Watch
+## Edit and watch
 
 Watch while editing source files [src-docs](src-docs):
 
