@@ -23,50 +23,29 @@ Install mkdocs:
 
     pip install -r requirements.txt
 
-## Watch
-
-Live reload at [http:/localhost:9000](http://localhost:9000)
-
-Watch changes in `docs`:
-
-    mkdocs serve -a 127.0.0.1:9000
-
-Watch changes in `examples/`, `src`, and `src-docs/`:
-
-Install `simple-file-watch`
+Install simple-file-watch (for adding changed php files to source code):
 
     npm install -g simple-file-watch
-    simple-file-watch --extension='md,php' --path='examples' --path='src-docs' --path='src' --command='./bin/generate-mkdocs.php'
 
-## Watch shortcut
+## Watch
 
-If the mkdocs and simple-file-watch are installed, you may run: 
+Watch while editing source files [src-docs](src-docs):
 
     source venv/bin/activate
     ./bin/serve.sh
 
-## Edit src files
+Live reload at [http:/localhost:9000](http://localhost:9000)
 
-Edit files in [src-docs](src-docs)
 
-## Build mkdocs
+## Build docs
 
-This builds a static HTML site in `site`. 
+This builds a static HTML site in `site`.
 
-    mkdocs build
-
-## Build single README.md
-
-Build all documentation as a single [README-docs.md](README-docs.md) file.
-This is not using mkdocs
-
-    ./bin/generate-docs-single-file.php
+    source venv/bin/activate
+    ./bin/build.sh
 
 ## Commit to docs/
 
 Shorthand command:
-
-This will update markdown files, insert php code in .md files, build mkdocs,
-copy to pebble-framework/docs, and commit with the message 'docs' 
 
     ./bin/commit.sh

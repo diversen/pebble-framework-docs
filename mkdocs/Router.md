@@ -172,6 +172,9 @@ use Pebble\Router;
 use Pebble\Exception\NotFoundException;
 use Pebble\ExceptionTrace;
 
+// Simple example of a middleware class
+class Middleware extends stdClass {}
+
 try {
 
     $router = new Router();
@@ -191,8 +194,7 @@ try {
 
     // You may set a middleware class which the middleware object will be created from
     // Otherwise it is just a stdClass the object will be created from
-    // $router->setMiddlewareClass(App\MiddlewareClass::class);
-
+    $router->setMiddlewareClass(Middleware::class);
     $router->run();
 } catch (NotFoundException $e) {
 

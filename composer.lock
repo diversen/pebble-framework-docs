@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "941d1ab19cf5aaa3ac4758ca353f96df",
+    "content-hash": "df1bcd2dde45a1f8d145a2b9265e9165",
     "packages": [
         {
             "name": "diversen/console-padding",
@@ -92,16 +92,16 @@
         },
         {
             "name": "diversen/parse-argv",
-            "version": "v3.0.2",
+            "version": "v3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/diversen/parse-argv.git",
-                "reference": "42c53eb3108157cbe88bea16d8b5c6b3dd6eeff6"
+                "reference": "87dfac35cce1ec86d289a603c25ede5623f896a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/diversen/parse-argv/zipball/42c53eb3108157cbe88bea16d8b5c6b3dd6eeff6",
-                "reference": "42c53eb3108157cbe88bea16d8b5c6b3dd6eeff6",
+                "url": "https://api.github.com/repos/diversen/parse-argv/zipball/87dfac35cce1ec86d289a603c25ede5623f896a2",
+                "reference": "87dfac35cce1ec86d289a603c25ede5623f896a2",
                 "shasum": ""
             },
             "require-dev": {
@@ -134,40 +134,37 @@
             ],
             "support": {
                 "issues": "https://github.com/diversen/parse-argv/issues",
-                "source": "https://github.com/diversen/parse-argv/tree/v3.0.2"
+                "source": "https://github.com/diversen/parse-argv/tree/v3.0.4"
             },
-            "time": "2022-06-28T15:47:21+00:00"
+            "time": "2022-07-04T15:44:20+00:00"
         },
         {
             "name": "diversen/pebble-framework",
-            "version": "v6.1.1",
+            "version": "v6.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/diversen/pebble-framework.git",
-                "reference": "63312c2542c1f91c8c84d40910b4c29e1051d9c7"
+                "reference": "5a18f15d8eeb916e98861c3bbcb3ea5d65b9ef48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/diversen/pebble-framework/zipball/63312c2542c1f91c8c84d40910b4c29e1051d9c7",
-                "reference": "63312c2542c1f91c8c84d40910b4c29e1051d9c7",
+                "url": "https://api.github.com/repos/diversen/pebble-framework/zipball/5a18f15d8eeb916e98861c3bbcb3ea5d65b9ef48",
+                "reference": "5a18f15d8eeb916e98861c3bbcb3ea5d65b9ef48",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4.3"
             },
             "require-dev": {
-                "diversen/minimal-cli-framework": "^3.0",
+                "diversen/minimal-cli-framework": "^6.0",
+                "diversen/simple-php-translation": "^3.0",
                 "erusev/parsedown": "^1.7",
                 "gregwar/captcha": "^1.1",
+                "monolog/monolog": "^2.7",
                 "phpmailer/phpmailer": "^6.0",
                 "phpunit/phpunit": "^9.5"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "4.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Pebble\\": "src/"
@@ -193,9 +190,9 @@
             ],
             "support": {
                 "issues": "https://github.com/diversen/pebble-framework/issues",
-                "source": "https://github.com/diversen/pebble-framework/tree/v6.1.1"
+                "source": "https://github.com/diversen/pebble-framework/tree/v6.2.6"
             },
-            "time": "2022-07-02T10:15:08+00:00"
+            "time": "2022-07-20T11:48:00+00:00"
         },
         {
             "name": "diversen/simple-php-translation",

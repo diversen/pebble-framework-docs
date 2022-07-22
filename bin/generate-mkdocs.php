@@ -118,7 +118,7 @@ function generate_mkdocs(array $files): void
 }
 
 
-echo "Generating new docs";
+echo "Generating new docs\n";
 
 generate_mkdocs($files);
 exit(0);
