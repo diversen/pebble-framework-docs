@@ -5,7 +5,7 @@ This part show other small classes you can use:
 The `Pebble\Captcha` class uses the [gregwar/captcha](https://github.com/Gregwar/Captcha) package.
 You need to install this package, e.g. using composer: 
 
-    composer require gregwar/captch
+    composer require diversen/captcha
 
 Usage:
 
