@@ -32,7 +32,7 @@ Install simple-file-watch (for adding changed php files to mkdocs):
 ## Edit and watch
 
 Watch while editing source files [src-docs](src-docs):
-
+    # if venv is not activated
     source venv/bin/activate
     ./bin/serve.sh
 
@@ -42,7 +42,7 @@ Live reload at [http:/localhost:9000](http://localhost:9000)
 ## Build docs
 
 This builds a static HTML site in `site`.
-
+    # if venv is not activated
     source venv/bin/activate
     ./bin/build.sh
 
