@@ -1,6 +1,8 @@
 # About 
 
-This is the documentation for the [pebble-framework](https://github.com/diversen/pebble-framework)
+This is the documentation for the [pebble-framework source code](https://github.com/diversen/pebble-framework)
+
+You may read it on the [pebble-framework-docs site](https://diversen.github.io/pebble-framework-docs/)
 
 # Build
 
