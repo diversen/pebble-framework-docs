@@ -8,7 +8,7 @@ Requirements:
 
 Install as dependency:
 
-    composer require diversen/pebble-framework
+    composer require diversen/pebble-framework:^8.0
 
 ### Run documentation examples
 
