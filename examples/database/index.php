@@ -14,9 +14,7 @@ function debug($message) {
 }
 
 try {
-    
-    $db = (new AppBase())->getDb();
-    // You could also get the same DB instance by using the service class
+
     $db = (new DBService())->getDB();
     debug("getDb");
 

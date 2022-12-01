@@ -4,7 +4,7 @@ The pebble-framework is a small framework for making php applications.
 
 Requirements:
 
-    PHP >= 7.4.3
+    PHP >= 8.1
 
 Install as dependency:
 

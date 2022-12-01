@@ -74,8 +74,6 @@ And you will get a `hello world!`.
 You can also visit a route that does not exist: 
 [http://localhost:8000/does/not/exists](http://localhost:8000/does/not/exists)
 
-And you will get an error message and a stack trace. 
-
 If you open the log file: 
 
     more logs/main.log

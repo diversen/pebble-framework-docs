@@ -3,7 +3,6 @@
 namespace App;
 
 use Pebble\Service\ACLService;
-use Pebble\App\AppBase;
 use Exception;
 
 class ACLTestController
@@ -14,9 +13,6 @@ class ACLTestController
     public function __construct()
     {
         $this->acl = (new ACLService())->getACL();
-
-        // Or
-        $this->acl = (new AppBase())->getACL();
 
         // Under normal circumstances you would receive a auth_id 
         // from the ACL object using `$this->acl->getAuthId();`

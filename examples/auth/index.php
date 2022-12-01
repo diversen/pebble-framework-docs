@@ -3,12 +3,13 @@
 require_once "../../vendor/autoload.php";
 
 use Pebble\App\AppBase;
+use Pebble\Service\AuthService;
 
 $app_base = new AppBase();
 $app_base->setErrorHandler();
 
 // Or use AppBase class
-$auth = (new AppBase())->getAuth();
+$auth = (new AuthService())->getAuth();
 
 // Just for printing what is going on
 function debug($message) {
@@ -21,6 +22,7 @@ $password = 'strong1234';
 
 $user = $auth->getByWhere(['email' => $email]);
 
+// No user create a user
 if (!$user) {
     try {
         $auth->create($email, $password);
@@ -30,6 +32,7 @@ if (!$user) {
     }
 }
 
+// Check if verified
 if ($auth->isVerified($email)) {
     debug("isVerified. User account is verified");
 

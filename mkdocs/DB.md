@@ -1,4 +1,6 @@
-The `Pebble\DB` class should work with any database, but in this documentation we will stick with a MySQL database. It is also the only database that has a `schema` containing tables for `Pebble\Auth`, `Pebble\ACL`, and `Pebble\ACLRole`. For instruction on running MySQL you may refer to [Setup MySQL](index#docker-mysql) 
+The `Pebble\DB` class should work with any database, but in this documentation we will stick with a MySQL database. 
+It is also the only database that has a `schema` containing tables for `Pebble\Auth`, `Pebble\ACL`, and `Pebble\ACLRole`. 
+For instruction on running MySQL you may refer to [Setup MySQL](index#docker-mysql) 
 
 ### Usage
 
@@ -23,9 +25,7 @@ function debug($message) {
 }
 
 try {
-    
-    $db = (new AppBase())->getDb();
-    // You could also get the same DB instance by using the service class
+
     $db = (new DBService())->getDB();
     debug("getDb");
 

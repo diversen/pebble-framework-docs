@@ -34,9 +34,11 @@ Now you can set a cookie like this:
 
 <!-- include: examples/cookie/index.php -->
 
-You may run this example: 
+You may run the example:
 
     php -S localhost:8000 -t examples/cookie/
+
+And then visit [http://localhost:8000/](http://localhost:8000/)
 
 ### Session
 
@@ -74,6 +76,8 @@ A simple key / value cache. Usage:
 Run the example:
 
     php -S localhost:8000 -t examples/dbcache
+
+And then visit [http://localhost:8000/](http://localhost:8000/)
 
 ### ExceptionTrace
 

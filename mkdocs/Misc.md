@@ -137,9 +137,11 @@ if (isset($_COOKIE['test'])) {
 
 ~~~
 
-You may run this example: 
+You may run the example:
 
     php -S localhost:8000 -t examples/cookie/
+
+And then visit [http://localhost:8000/](http://localhost:8000/)
 
 ### Session
 
@@ -289,6 +291,8 @@ if (!$from_cache) {
 Run the example:
 
     php -S localhost:8000 -t examples/dbcache
+
+And then visit [http://localhost:8000/](http://localhost:8000/)
 
 ### ExceptionTrace
 

@@ -45,14 +45,10 @@ some configuration values:
 
 require_once "../../vendor/autoload.php";
 
-use Pebble\App\AppBase;
 use Pebble\Service\ConfigService;
 
 // Get the service from the ConfigService class
 $config = (new ConfigService())->getConfig();
-
-// Or get the ConfigService instance from the AppBase class
-$config = (new AppBase())->getConfig();
 
 // Is dev. Because config-locale/ overrides config/
 if ($config->get('App.env')) {

@@ -17,7 +17,6 @@ Let's test the ACL object in a controller.
 namespace App;
 
 use Pebble\Service\ACLRoleService;
-use Pebble\App\AppBase;
 use Exception;
 
 class ACLRoleTestController
@@ -29,9 +28,6 @@ class ACLRoleTestController
     {
         // Get acl role instance using the service class
         $this->acl_role = (new ACLRoleService())->getACLRole();
-
-        // Get acl role instance using the AppBase class
-        $this->acl_role = (new AppBase())->getACLRole();
 
         // Under normal circumstances you would receive an auth_id 
         // from the ACLRole object using `$this->acl_role->getAuthId();`

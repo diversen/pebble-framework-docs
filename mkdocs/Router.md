@@ -1,7 +1,7 @@
 ### Defining routes 
 
 Routes are defined in controller classes, which are then connected to the router.
-There are two methods you will need to know: 
+You will add different routes as class names and then you will run the router: 
 
 * `Router::addClass(App\HomeController::class)`
 * `Router::run()`
