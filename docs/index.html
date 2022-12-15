@@ -566,7 +566,7 @@ composer install
 <p>If you want to run all code examples you will need access to a MySQL database. </p>
 <h3 id="docker-mysql">Docker MySQL</h3>
 <p>If you don't have access to a MySQL database you may install a MySQL docker image that will work. The <code>root</code> user is given the password <code>password</code> in the following install:</p>
-<div class="highlight"><pre><span></span><code>docker run -p 3306:3306 --name mysql-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.7
+<div class="highlight"><pre><span></span><code>docker run -p 3306:3306 --name mysql-server -e MYSQL_ROOT_PASSWORD=password -d mysql:8.0
 </code></pre></div>
 <p>Create a database:</p>
 <div class="highlight"><pre><span></span><code>./cli.sh db --server-connect
