@@ -21,11 +21,6 @@ displayed and cleared.
 namespace App;
 
 use Pebble\Flash;
-use App\AppBase;
-
-$app_base = new AppBase();
-$app_base->setErrorHandler();
-$app_base->setIncludePath();
 
 class FlashTestController
 {
@@ -80,11 +75,13 @@ We execute this controller in our `index.php` file:
 require_once "../../vendor/autoload.php";
 
 use App\FlashTestController;
-use Pebble\App\AppBase;
 use Pebble\App\AppExec;
 use Pebble\Router;
 
-class TestApp  extends AppBase {
+class TestApp {
+
+    use \Pebble\Trait\MainUtils;
+
     public function run() {
         $this->setErrorHandler();
 

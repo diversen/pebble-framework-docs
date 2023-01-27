@@ -3,7 +3,6 @@
 require_once "../../vendor/autoload.php";
 
 use Pebble\App\AppExec;
-use Pebble\App\AppBase;
 use Pebble\App\StdErrorController;
 use Pebble\Router;
 
@@ -15,8 +14,10 @@ $app_exec = new AppExec();
 
 // Create an app to be executed. It does not need to extend AppBase
 // But AppBase has some nice utility methods
-class MyApp extends AppBase {
+class MyApp {
 
+    use \Pebble\Trait\MainUtils;
+    
     public function run() {
 
         // Throw on all errors and notices

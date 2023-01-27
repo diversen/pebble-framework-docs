@@ -3,11 +3,6 @@
 namespace App;
 
 use Pebble\Flash;
-use App\AppBase;
-
-$app_base = new AppBase();
-$app_base->setErrorHandler();
-$app_base->setIncludePath();
 
 class FlashTestController
 {

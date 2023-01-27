@@ -92,11 +92,13 @@ We execute this controller in our `index.php` file:
 require_once "../../vendor/autoload.php";
 
 use App\ACLRoleTestController;
-use Pebble\App\AppBase;
 use Pebble\App\AppExec;
 use Pebble\Router;
 
-class TestApp  extends AppBase {
+class TestApp {
+
+    use \Pebble\Trait\MainUtils;
+    
     public function run() {
         $this->setErrorHandler();
         $router = new Router();

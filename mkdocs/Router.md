@@ -89,13 +89,6 @@ require_once "../../vendor/autoload.php";
 use Pebble\Router;
 use Pebble\Exception\NotFoundException;
 use Pebble\ExceptionTrace;
-use Pebble\App\AppBase;
-
-// The app base class is used to provide some basic utilities to the app.
-$app_base = new AppBase();
-
-// All errors and notices will be thrown as exceptions
-$app_base->setErrorHandler();
 
 try {
     

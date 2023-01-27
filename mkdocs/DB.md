@@ -13,12 +13,8 @@ Now we can test all methods. Most of these methods should be self-explanatory.
 
 require_once "../../vendor/autoload.php";
 
-use Pebble\App\AppBase;
 use Pebble\Service\DBService;
 use Pebble\ExceptionTrace;
-
-$app_base = new AppBase();
-$app_base->setErrorHandler();
 
 function debug($message) {
     echo "$message<br/>";

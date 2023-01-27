@@ -6,7 +6,7 @@
         "phpmailer/phpmailer": "^6.6",
         "diversen/simple-php-translation": "^3.0",
         "symfony/yaml": "^5.4",
-        "diversen/pebble-framework": "^8.0",
+        "diversen/pebble-framework": "^9.0",
         "diversen/minimal-cli-framework": "^6.1"
     },
 

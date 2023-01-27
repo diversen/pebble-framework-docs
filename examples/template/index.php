@@ -3,10 +3,11 @@
 require_once "../../vendor/autoload.php";
 
 use Pebble\Router;
-use Pebble\App\AppBase;
 use Pebble\App\AppExec;
 
-class MyApp extends AppBase {
+class MyApp {
+
+    use \Pebble\Trait\MainUtils;
 
     public function run () {
 

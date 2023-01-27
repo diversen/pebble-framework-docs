@@ -25,11 +25,7 @@ The following example shows a test of all methods:
 
 require_once "../../vendor/autoload.php";
 
-use Pebble\App\AppBase;
 use Pebble\Service\AuthService;
-
-$app_base = new AppBase();
-$app_base->setErrorHandler();
 
 // Or use AppBase class
 $auth = (new AuthService())->getAuth();
