@@ -18,25 +18,22 @@ require_once "../../vendor/autoload.php";
 use Pebble\App\AppExec;
 use Pebble\App\StdErrorController;
 use Pebble\Router;
+use Pebble\App\CommonUtils;
 
 $app_exec = new AppExec();
 
-// This is the default error controller. 
+// This uses is the default error controller. 
 // You may set your own error controller, e.g. like this: 
 // $app_exec->setErrorController(App\ErrorController::class);
 // 
-// Create an app to be executed. It uses the MainUtils trait
-// in order to call setErrorHandler() method.
-// 
-// This causes all errors and notices to be thrown as exceptions.
 class MyApp {
 
-    use \Pebble\Trait\MainUtils;
     
     public function run() {
 
-        // Throw on all errors and notices
-        $this->setErrorHandler();
+        // This makes all errors and notices to be thrown as exceptions
+        $common_utils = new CommonUtils();   
+        $common_utils->setErrorHandler();
 
         $router = new Router();
         $router->addClass(App\SimpleHomeController::class);

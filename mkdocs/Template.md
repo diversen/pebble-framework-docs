@@ -108,18 +108,17 @@ require_once "../../vendor/autoload.php";
 
 use Pebble\Router;
 use Pebble\App\AppExec;
+use Pebble\App\CommonUtils;
 
 class MyApp {
 
-    use \Pebble\Trait\MainUtils;
-
     public function run () {
-
-        $this->setErrorHandler();
+        $common_utils = new CommonUtils();
+        $common_utils->setErrorHandler();
         
         // Add src to include path 
         // Then templates are loaded without adding 'src' to the path
-        $this->addSrcToIncludePath();
+        $common_utils->addSrcToIncludePath();
 
         $router = new Router();
         $router->addClass(App\TemplateTest::class);

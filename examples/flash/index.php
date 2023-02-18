@@ -5,16 +5,18 @@ require_once "../../vendor/autoload.php";
 use App\FlashTestController;
 use Pebble\App\AppExec;
 use Pebble\Router;
+use Pebble\App\CommonUtils;
 
 class TestApp {
 
-    use \Pebble\Trait\MainUtils;
 
     public function run() {
-        $this->setErrorHandler();
+
+        $common_utils = new CommonUtils();
+        $common_utils->setErrorHandler();
 
         // Start session as flash message uses session
-        $this->sessionStart();
+        $common_utils->sessionStart();
         
         $router = new Router();
         $router->addClass(FlashTestController::class);
