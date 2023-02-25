@@ -43,21 +43,21 @@ class ACLTestController
             ];
     }
 
-    #[Route('/rights/add')]
+    #[Route(path: '/rights/add')]
     public function RightsAdd()
     {
         $this->acl->setAccessRights($this->rights);
         echo "Access rights added";
     }
 
-    #[Route('/rights/remove')]
+    #[Route(path: '/rights/remove')]
     public function rightsRemove()
     {
         $this->acl->removeAccessRights($this->rights);
         echo "Access rights removed";
     }
 
-    #[Route('/note/read/:id')]
+    #[Route(path: '/note/read/:id')]
     public function noteRead(array $params)
     {
         $rights = [

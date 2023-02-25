@@ -21,7 +21,7 @@ use Pebble\Attributes\Route;
 
 class SimpleHomeController {
 
-    #[Route(path: '/', verbs: ['GET,POST'])]
+    #[Route(path: '/', verbs: ['GET', 'POST'])]
     public function index() {
         echo "Hello world!";
     }
@@ -135,7 +135,7 @@ use Pebble\Attributes\Route;
 
 class HomeController {
 
-    #[Route('/user/:username')]
+    #[Route(path: '/user/:username')]
     public function userGreeting(array $params, object $middleware_object) {
         echo "Hello world $params[username]!<br />";
         echo $middleware_object->message . "<br />";

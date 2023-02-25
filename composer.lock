@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4bdeeca97e1d0024af770079ddc4bfc",
+    "content-hash": "9205afca69651c8fe0a5100fa21fc779",
     "packages": [
         {
             "name": "diversen/console-padding",

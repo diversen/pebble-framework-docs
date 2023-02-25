@@ -40,21 +40,21 @@ class ACLRoleTestController
             ];
     }
 
-    #[Route('/role/add')]
+    #[Route(path: '/role/add')]
     public function roleAdd()
     {
         $this->acl_role->setRole($this->role);
         echo "Access role added";
     }
 
-    #[Route('/role/remove')]
+    #[Route(path: '/role/remove')]
     public function roleRemove()
     {
         $this->acl_role->removeRole($this->role);
         echo "Access rights removed";
     }
 
-    #[Route('/admin/notes')]
+    #[Route(path: '/admin/notes')]
     public function noteRead(array $params)
     {
         $role = [

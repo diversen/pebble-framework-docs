@@ -548,7 +548,7 @@ You will add different routes as class names and then you will run the router: <
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">class</span> <span class="nc">SimpleHomeController</span> <span class="p">{</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="c1">#[Route(path: &#39;/&#39;, verbs: [&#39;GET,POST&#39;])]</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="c1">#[Route(path: &#39;/&#39;, verbs: [&#39;GET&#39;, &#39;POST&#39;])]</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="k">echo</span> <span class="s2">&quot;Hello world!&quot;</span><span class="p">;</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">}</span>
@@ -633,7 +633,7 @@ You will add different routes as class names and then you will run the router: <
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">class</span> <span class="nc">HomeController</span> <span class="p">{</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="c1">#[Route(&#39;/user/:username&#39;)]</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="c1">#[Route(path: &#39;/user/:username&#39;)]</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">userGreeting</span><span class="p">(</span><span class="k">array</span> <span class="nv">$params</span><span class="p">,</span> <span class="nx">object</span> <span class="nv">$middleware_object</span><span class="p">)</span> <span class="p">{</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="k">echo</span> <span class="s2">&quot;Hello world </span><span class="si">$params[username]</span><span class="s2">!&lt;br /&gt;&quot;</span><span class="p">;</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="k">echo</span> <span class="nv">$middleware_object</span><span class="o">-&gt;</span><span class="na">message</span> <span class="o">.</span> <span class="s2">&quot;&lt;br /&gt;&quot;</span><span class="p">;</span>

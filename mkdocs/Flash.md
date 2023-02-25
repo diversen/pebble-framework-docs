@@ -31,7 +31,7 @@ class FlashTestController
         $this->flash = new Flash();
     }
 
-    #[Route('/')]
+    #[Route(path: '/')]
     public function index()
     {
         $flash_str = '';
@@ -48,7 +48,7 @@ class FlashTestController
         echo $content;
     }
 
-    #[Route('/click')]
+    #[Route(path: '/click')]
     public function click(array $params, Object $object)
     {
         $random = rand(0, 10);

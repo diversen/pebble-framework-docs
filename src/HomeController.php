@@ -6,7 +6,7 @@ use Pebble\Attributes\Route;
 
 class HomeController {
 
-    #[Route('/user/:username')]
+    #[Route(path: '/user/:username')]
     public function userGreeting(array $params, object $middleware_object) {
         echo "Hello world $params[username]!<br />";
         echo $middleware_object->message . "<br />";

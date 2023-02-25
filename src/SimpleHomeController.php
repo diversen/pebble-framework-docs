@@ -6,7 +6,7 @@ use Pebble\Attributes\Route;
 
 class SimpleHomeController {
 
-    #[Route(path: '/', verbs: ['GET,POST'])]
+    #[Route(path: '/', verbs: ['GET', 'POST'])]
     public function index() {
         echo "Hello world!";
     }
