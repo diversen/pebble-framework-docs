@@ -21,6 +21,7 @@ displayed and cleared.
 namespace App;
 
 use Pebble\Flash;
+use Pebble\Attributes\Route;
 
 class FlashTestController
 {
@@ -30,10 +31,7 @@ class FlashTestController
         $this->flash = new Flash();
     }
 
-    /**
-     * @route /
-     * @verbs GET
-     */
+    #[Route('/')]
     public function index()
     {
         $flash_str = '';
@@ -50,10 +48,7 @@ class FlashTestController
         echo $content;
     }
 
-    /**
-     * @route /click
-     * @verbs GET
-     */
+    #[Route('/click')]
     public function click(array $params, Object $object)
     {
         $random = rand(0, 10);

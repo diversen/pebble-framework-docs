@@ -538,34 +538,30 @@ You will add different routes as class names and then you will run the router: <
 <li><code>Router::run()</code></li>
 </ul>
 <p>The first method sets up some application endpoints and the latter method runs the application. An <code>Exception</code> is thrown if no valid endpoint is found. </p>
-<p>The router instance is looking for the tags <code>route</code> and <code>verbs</code> in the comments of the controller classes. A simple controller example could look like this:</p>
+<p>The router instance is looking for the tags <code>route</code> and <code>verbs</code> using the attribute <code>Route</code>. A simple controller example could look like this:</p>
 <p><code>src/SimpleHomeController.php -&gt;</code></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">namespace</span> <span class="nx">App</span><span class="p">;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">class</span> <span class="nc">SimpleHomeController</span> <span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">use</span> <span class="nx">Pebble\Attributes\Route</span><span class="p">;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="sd">/**</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sd">     * @route /</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sd">     * @verbs GET,POST</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="sd">     */</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="k">echo</span> <span class="s2">&quot;Hello world!&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="p">}</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="sd">/**</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="sd">     * @route /user/:username</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="sd">     * @verbs GET</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="sd">     */</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">userGreeting</span><span class="p">(</span><span class="k">array</span> <span class="nv">$params</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="k">echo</span> <span class="s2">&quot;Hello world </span><span class="si">$params[username]</span><span class="s2">!&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="p">}</span> 
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">class</span> <span class="nc">SimpleHomeController</span> <span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="c1">#[Route(path: &#39;/&#39;, verbs: [&#39;GET,POST&#39;])]</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="k">echo</span> <span class="s2">&quot;Hello world!&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="c1">#[Route(path: &#39;/user/:username&#39;)]</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">userGreeting</span><span class="p">(</span><span class="k">array</span> <span class="nv">$params</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="k">echo</span> <span class="s2">&quot;Hello world </span><span class="si">$params[username]</span><span class="s2">!&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="p">}</span> 
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span>
 </code></pre></div>
-<p>The above route <code>/</code> will accept the verbs GET and POST and the route <code>/</code> will dispatch the method <code>index</code>.</p>
-<p>The second route <code>/user/:username</code> will dispatch the method <code>userGreeting</code>. This method transforms the second URL segment into a string parameter, which the controller method may use. This route only accepts GET requests.  </p>
-<p>The routes can also be made a bit more complex, like <code>@route /user/:username/actions/:action</code>. If this route is matched, then the <code>$params</code> array will contain both <code>username</code> and <code>action</code> keys and values.</p>
+<p>The route will accept the verbs GET and POST and the path <code>/</code> will dispatch the method <code>index</code>.</p>
+<p>The second route using the path <code>/user/:username</code> will dispatch the method <code>userGreeting</code>. This method transforms the second URL segment into a string parameter, which the controller method may use. This route only accepts GET requests ((which is used if no verbs is used).  </p>
+<p>The <code>path</code> can also be made a bit more complex, like e.g. <code>/user/:username/actions/:action</code>. If this route is matched, then the <code>$params</code> array will contain both <code>username</code> and <code>action</code> keys and values.</p>
 <p>Let's connect the above <code>SimpleHomeController</code> class to a router instance in an index.php file: </p>
 <p><code>examples/router_simple/index.php -&gt;</code></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;?php</span>
@@ -633,20 +629,19 @@ You will add different routes as class names and then you will run the router: <
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">namespace</span> <span class="nx">App</span><span class="p">;</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">class</span> <span class="nc">HomeController</span> <span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">use</span> <span class="nx">Pebble\Attributes\Route</span><span class="p">;</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="sd">/**</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="sd">     * @route /user/:username</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="sd">     * @verbs GET</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="sd">     */</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">userGreeting</span><span class="p">(</span><span class="k">array</span> <span class="nv">$params</span><span class="p">,</span> <span class="nx">object</span> <span class="nv">$middleware_object</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="k">echo</span> <span class="s2">&quot;Hello world </span><span class="si">$params[username]</span><span class="s2">!&lt;br /&gt;&quot;</span><span class="p">;</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        <span class="k">echo</span> <span class="nv">$middleware_object</span><span class="o">-&gt;</span><span class="na">message</span> <span class="o">.</span> <span class="s2">&quot;&lt;br /&gt;&quot;</span><span class="p">;</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="c1">// Note: You can always get the current route from the router if you need to. </span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        <span class="k">echo</span> <span class="s2">&quot;Current route is: &quot;</span> <span class="o">.</span> <span class="nx">\Pebble\Router</span><span class="o">::</span><span class="na">getCurrentRoute</span><span class="p">();</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="p">}</span>   
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">class</span> <span class="nc">HomeController</span> <span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="c1">#[Route(&#39;/user/:username&#39;)]</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">userGreeting</span><span class="p">(</span><span class="k">array</span> <span class="nv">$params</span><span class="p">,</span> <span class="nx">object</span> <span class="nv">$middleware_object</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="k">echo</span> <span class="s2">&quot;Hello world </span><span class="si">$params[username]</span><span class="s2">!&lt;br /&gt;&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="k">echo</span> <span class="nv">$middleware_object</span><span class="o">-&gt;</span><span class="na">message</span> <span class="o">.</span> <span class="s2">&quot;&lt;br /&gt;&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        <span class="c1">// Note: You can always get the current route from the router if you need to. </span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="k">echo</span> <span class="s2">&quot;Current route is: &quot;</span> <span class="o">.</span> <span class="nx">\Pebble\Router</span><span class="o">::</span><span class="na">getCurrentRoute</span><span class="p">();</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="p">}</span>   
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">}</span>
 </code></pre></div>
 <p>Create an application like this: </p>
 <p><code>examples/router_middleware/index.php -&gt;</code></p>

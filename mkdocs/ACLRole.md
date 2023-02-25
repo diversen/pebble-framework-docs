@@ -18,6 +18,7 @@ namespace App;
 
 use Pebble\Service\ACLRoleService;
 use Exception;
+use Pebble\Attributes\Route;
 
 class ACLRoleTestController
 {
@@ -39,30 +40,21 @@ class ACLRoleTestController
             ];
     }
 
-    /**
-     * @route /role/add
-     * @verbs GET
-     */
+    #[Route('/role/add')]
     public function roleAdd()
     {
         $this->acl_role->setRole($this->role);
         echo "Access role added";
     }
 
-    /**
-     * @route /role/remove
-     * @verbs GET
-     */
+    #[Route('/role/remove')]
     public function roleRemove()
     {
         $this->acl_role->removeRole($this->role);
         echo "Access rights removed";
     }
 
-    /**
-     * @route /admin/notes
-     * @verbs GET
-     */
+    #[Route('/admin/notes')]
     public function noteRead(array $params)
     {
         $role = [

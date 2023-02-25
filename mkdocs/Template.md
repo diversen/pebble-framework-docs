@@ -64,13 +64,11 @@ We add a new controller class called ` TemplateTest` in the `src` dir.
 namespace App;
 
 use Pebble\Template;
+use Pebble\Attributes\Route;
 
 class TemplateTest {
 
-    /**
-     * @route /user/:username
-     * @verbs GET
-     */
+    #[Route(path: '/user/:username')]
     public function userGreeting(array $params, object $middle_ware) {
         
         $variables['title'] = 'Greeting with paragraphs'; 

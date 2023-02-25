@@ -12,9 +12,9 @@ The router instance is looking for the tags `route` and `verbs` using the attrib
 
 <!-- include: src/SimpleHomeController.php -->
 
-The above route `/` will accept the verbs GET and POST and the path `/` will dispatch the method `index`.
+The route will accept the verbs GET and POST and the path `/` will dispatch the method `index`.
 
-The second route with the path `/user/:username` will dispatch the method `userGreeting`. This method transforms the second URL segment into a string parameter, which the controller method may use. This route only accepts GET requests ((which is used if no verbs is used).  
+The second route using the path `/user/:username` will dispatch the method `userGreeting`. This method transforms the second URL segment into a string parameter, which the controller method may use. This route only accepts GET requests ((which is used if no verbs is used).  
 
 The `path` can also be made a bit more complex, like e.g. `/user/:username/actions/:action`. If this route is matched, then the `$params` array will contain both `username` and `action` keys and values.
 

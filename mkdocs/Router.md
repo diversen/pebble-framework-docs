@@ -8,7 +8,7 @@ You will add different routes as class names and then you will run the router:
 
 The first method sets up some application endpoints and the latter method runs the application. An `Exception` is thrown if no valid endpoint is found. 
 
-The router instance is looking for the tags `route` and `verbs` in the comments of the controller classes. A simple controller example could look like this:
+The router instance is looking for the tags `route` and `verbs` using the attribute `Route`. A simple controller example could look like this:
 
 ```src/SimpleHomeController.php ->```
 
@@ -17,20 +17,16 @@ The router instance is looking for the tags `route` and `verbs` in the comments 
 
 namespace App;
 
+use Pebble\Attributes\Route;
+
 class SimpleHomeController {
 
-    /**
-     * @route /
-     * @verbs GET,POST
-     */
+    #[Route(path: '/', verbs: ['GET,POST'])]
     public function index() {
         echo "Hello world!";
     }
 
-    /**
-     * @route /user/:username
-     * @verbs GET
-     */
+    #[Route(path: '/user/:username')]
     public function userGreeting(array $params) {
         echo "Hello world $params[username]!";
     } 
@@ -38,11 +34,11 @@ class SimpleHomeController {
 
 ~~~
 
-The above route `/` will accept the verbs GET and POST and the route `/` will dispatch the method `index`.
+The route will accept the verbs GET and POST and the path `/` will dispatch the method `index`.
 
-The second route `/user/:username` will dispatch the method `userGreeting`. This method transforms the second URL segment into a string parameter, which the controller method may use. This route only accepts GET requests.  
+The second route using the path `/user/:username` will dispatch the method `userGreeting`. This method transforms the second URL segment into a string parameter, which the controller method may use. This route only accepts GET requests ((which is used if no verbs is used).  
 
-The routes can also be made a bit more complex, like `@route /user/:username/actions/:action`. If this route is matched, then the `$params` array will contain both `username` and `action` keys and values.
+The `path` can also be made a bit more complex, like e.g. `/user/:username/actions/:action`. If this route is matched, then the `$params` array will contain both `username` and `action` keys and values.
 
 Let's connect the above `SimpleHomeController` class to a router instance in an index.php file: 
 
@@ -135,12 +131,11 @@ Here is a controller where both `$params` and `$middleware_object` are used:
 
 namespace App;
 
+use Pebble\Attributes\Route;
+
 class HomeController {
-    
-    /**
-     * @route /user/:username
-     * @verbs GET
-     */
+
+    #[Route('/user/:username')]
     public function userGreeting(array $params, object $middleware_object) {
         echo "Hello world $params[username]!<br />";
         echo $middleware_object->message . "<br />";

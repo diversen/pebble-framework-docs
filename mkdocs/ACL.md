@@ -20,6 +20,7 @@ namespace App;
 
 use Pebble\Service\ACLService;
 use Exception;
+use Pebble\Attributes\Route;
 
 class ACLTestController
 {
@@ -42,32 +43,21 @@ class ACLTestController
             ];
     }
 
-
-    /**
-     * @route /rights/add
-     * @verbs GET
-     */
-    
+    #[Route('/rights/add')]
     public function RightsAdd()
     {
         $this->acl->setAccessRights($this->rights);
         echo "Access rights added";
     }
 
-    /**
-     * @route /rights/remove
-     * @verbs GET
-     */
+    #[Route('/rights/remove')]
     public function rightsRemove()
     {
         $this->acl->removeAccessRights($this->rights);
         echo "Access rights removed";
     }
 
-    /**
-     * @route /note/read/:id
-     * @verbs GET
-     */
+    #[Route('/note/read/:id')]
     public function noteRead(array $params)
     {
         $rights = [
