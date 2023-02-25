@@ -2,20 +2,16 @@
 
 namespace App;
 
+use Pebble\Attributes\Route;
+
 class SimpleHomeController {
 
-    /**
-     * @route /
-     * @verbs GET,POST
-     */
+    #[Route(path: '/', verbs: ['GET,POST'])]
     public function index() {
         echo "Hello world!";
     }
 
-    /**
-     * @route /user/:username
-     * @verbs GET
-     */
+    #[Route(path: '/user/:username')]
     public function userGreeting(array $params) {
         echo "Hello world $params[username]!";
     } 

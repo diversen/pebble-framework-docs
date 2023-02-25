@@ -2,12 +2,11 @@
 
 namespace App;
 
+use Pebble\Attributes\Route;
+
 class HomeController {
-    
-    /**
-     * @route /user/:username
-     * @verbs GET
-     */
+
+    #[Route('/user/:username')]
     public function userGreeting(array $params, object $middleware_object) {
         echo "Hello world $params[username]!<br />";
         echo $middleware_object->message . "<br />";

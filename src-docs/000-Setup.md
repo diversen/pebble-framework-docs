@@ -26,7 +26,7 @@ If you want to run all code examples you will need access to a MySQL database.
 
 If you don't have access to a MySQL database you may install a MySQL docker image that will work. The `root` user is given the password `password` in the following install:
 
-    docker run -p 3306:3306 --name mysql-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.7
+    docker run -p 3306:3306 --name mysql-server -e MYSQL_ROOT_PASSWORD=password -d mysql:8.0
 
 Create a database:
 

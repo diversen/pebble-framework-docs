@@ -47,6 +47,7 @@ class ACLTestController
      * @route /rights/add
      * @verbs GET
      */
+    
     public function RightsAdd()
     {
         $this->acl->setAccessRights($this->rights);

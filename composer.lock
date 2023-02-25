@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90fafa6780f1161d0f7e1cf4d4ee6c6b",
+    "content-hash": "c4bdeeca97e1d0024af770079ddc4bfc",
     "packages": [
         {
             "name": "diversen/console-padding",
@@ -140,16 +140,16 @@
         },
         {
             "name": "diversen/pebble-framework",
-            "version": "9.0.81",
+            "version": "v10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/diversen/pebble-framework.git",
-                "reference": "b2904e92633abb35e43157e4565ef694d5f7dc9f"
+                "reference": "bcce75c1f1eccd6dd2ba987e2821ea3594e8daaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/diversen/pebble-framework/zipball/b2904e92633abb35e43157e4565ef694d5f7dc9f",
-                "reference": "b2904e92633abb35e43157e4565ef694d5f7dc9f",
+                "url": "https://api.github.com/repos/diversen/pebble-framework/zipball/bcce75c1f1eccd6dd2ba987e2821ea3594e8daaf",
+                "reference": "bcce75c1f1eccd6dd2ba987e2821ea3594e8daaf",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
                 "jasongrimes/paginator": "^1.0",
                 "monolog/monolog": "^2.7",
                 "phpmailer/phpmailer": "^6.0",
-                "phpstan/phpstan": "^1.8",
+                "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.5"
             },
             "type": "library",
@@ -193,9 +193,9 @@
             ],
             "support": {
                 "issues": "https://github.com/diversen/pebble-framework/issues",
-                "source": "https://github.com/diversen/pebble-framework/tree/9.0.81"
+                "source": "https://github.com/diversen/pebble-framework/tree/v10.0.0"
             },
-            "time": "2023-01-31T11:17:14+00:00"
+            "time": "2023-02-25T13:21:18+00:00"
         },
         {
             "name": "diversen/simple-php-translation",
