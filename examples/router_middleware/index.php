@@ -12,6 +12,7 @@ try {
     $router = new Router();
     $router->addClass(App\HomeController::class);
 
+    # middleware just add a property to the request object
     function middle_ware_1 (Request $request) {
         $request->message = 'From middle_ware_1';
     }
@@ -24,8 +25,6 @@ try {
     $router->use('middle_ware_1');
     $router->use('middle_ware_2');
 
-    // You may set a middleware class which the middleware object will be created from
-    // Otherwise it is just a stdClass the object will be created from
     $router->run();
 } catch (NotFoundException $e) {
 
