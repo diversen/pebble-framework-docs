@@ -7,7 +7,7 @@
         "diversen/simple-php-translation": "^3.0",
         "symfony/yaml": "^5.4",
         "diversen/minimal-cli-framework": "^6.1",
-        "diversen/pebble-framework": "^10.0"
+        "diversen/pebble-framework": "dev-main"
     },
 
     "autoload": {

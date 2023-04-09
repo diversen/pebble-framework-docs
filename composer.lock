@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9205afca69651c8fe0a5100fa21fc779",
+    "content-hash": "cc4bef06aedd10c143f29ba5cf242331",
     "packages": [
         {
             "name": "diversen/console-padding",
@@ -50,21 +50,21 @@
         },
         {
             "name": "diversen/minimal-cli-framework",
-            "version": "v6.1.3",
+            "version": "v6.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/diversen/minimal-cli-framework.git",
-                "reference": "917dae289f969eaadfd9b9ada155c49ae719e71c"
+                "reference": "556a85eebab50be5573d5c82d3fcc58893269878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/diversen/minimal-cli-framework/zipball/917dae289f969eaadfd9b9ada155c49ae719e71c",
-                "reference": "917dae289f969eaadfd9b9ada155c49ae719e71c",
+                "url": "https://api.github.com/repos/diversen/minimal-cli-framework/zipball/556a85eebab50be5573d5c82d3fcc58893269878",
+                "reference": "556a85eebab50be5573d5c82d3fcc58893269878",
                 "shasum": ""
             },
             "require": {
                 "diversen/console-padding": "^2.0",
-                "diversen/parse-argv": "^3.0",
+                "diversen/parse-argv": "^4.0",
                 "php-parallel-lint/php-console-color": "^1.0"
             },
             "type": "library",
@@ -86,22 +86,22 @@
             "description": "A very fast and simple CLI framework",
             "support": {
                 "issues": "https://github.com/diversen/minimal-cli-framework/issues",
-                "source": "https://github.com/diversen/minimal-cli-framework/tree/v6.1.3"
+                "source": "https://github.com/diversen/minimal-cli-framework/tree/v6.1.4"
             },
-            "time": "2023-01-03T16:33:20+00:00"
+            "time": "2023-03-01T17:34:39+00:00"
         },
         {
             "name": "diversen/parse-argv",
-            "version": "v3.0.4",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/diversen/parse-argv.git",
-                "reference": "87dfac35cce1ec86d289a603c25ede5623f896a2"
+                "reference": "8f0339030bc50e655efb3e424a9efaf4af537d5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/diversen/parse-argv/zipball/87dfac35cce1ec86d289a603c25ede5623f896a2",
-                "reference": "87dfac35cce1ec86d289a603c25ede5623f896a2",
+                "url": "https://api.github.com/repos/diversen/parse-argv/zipball/8f0339030bc50e655efb3e424a9efaf4af537d5a",
+                "reference": "8f0339030bc50e655efb3e424a9efaf4af537d5a",
                 "shasum": ""
             },
             "require-dev": {
@@ -134,22 +134,22 @@
             ],
             "support": {
                 "issues": "https://github.com/diversen/parse-argv/issues",
-                "source": "https://github.com/diversen/parse-argv/tree/v3.0.4"
+                "source": "https://github.com/diversen/parse-argv/tree/v4.1.0"
             },
-            "time": "2022-07-04T15:44:20+00:00"
+            "time": "2023-03-22T06:22:03+00:00"
         },
         {
             "name": "diversen/pebble-framework",
-            "version": "v10.0.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/diversen/pebble-framework.git",
-                "reference": "bcce75c1f1eccd6dd2ba987e2821ea3594e8daaf"
+                "reference": "74c8436c0318d47b3f0e4e8a41b52e3b76f738fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/diversen/pebble-framework/zipball/bcce75c1f1eccd6dd2ba987e2821ea3594e8daaf",
-                "reference": "bcce75c1f1eccd6dd2ba987e2821ea3594e8daaf",
+                "url": "https://api.github.com/repos/diversen/pebble-framework/zipball/74c8436c0318d47b3f0e4e8a41b52e3b76f738fc",
+                "reference": "74c8436c0318d47b3f0e4e8a41b52e3b76f738fc",
                 "shasum": ""
             },
             "require": {
@@ -167,6 +167,7 @@
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.5"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -193,9 +194,9 @@
             ],
             "support": {
                 "issues": "https://github.com/diversen/pebble-framework/issues",
-                "source": "https://github.com/diversen/pebble-framework/tree/v10.0.0"
+                "source": "https://github.com/diversen/pebble-framework/tree/v10.0.1"
             },
-            "time": "2023-02-25T13:21:18+00:00"
+            "time": "2023-04-09T10:08:37+00:00"
         },
         {
             "name": "diversen/simple-php-translation",
@@ -306,16 +307,16 @@
         },
         {
             "name": "gregwar/captcha",
-            "version": "v1.1.9",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Gregwar/Captcha.git",
-                "reference": "4bb668e6b40e3205a020ca5ee4ca8cff8b8780c5"
+                "reference": "6e5b61b66ac89885b505153f4ef9a74ffa5b3074"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Gregwar/Captcha/zipball/4bb668e6b40e3205a020ca5ee4ca8cff8b8780c5",
-                "reference": "4bb668e6b40e3205a020ca5ee4ca8cff8b8780c5",
+                "url": "https://api.github.com/repos/Gregwar/Captcha/zipball/6e5b61b66ac89885b505153f4ef9a74ffa5b3074",
+                "reference": "6e5b61b66ac89885b505153f4ef9a74ffa5b3074",
                 "shasum": ""
             },
             "require": {
@@ -327,7 +328,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^6.4"
             },
-            "type": "captcha",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "Gregwar\\": "src/Gregwar"
@@ -357,9 +358,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Gregwar/Captcha/issues",
-                "source": "https://github.com/Gregwar/Captcha/tree/master"
+                "source": "https://github.com/Gregwar/Captcha/tree/v1.2.0"
             },
-            "time": "2020-03-24T14:39:05+00:00"
+            "time": "2023-03-24T22:12:41+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -514,16 +515,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.7.1",
+            "version": "v6.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "49cd7ea3d2563f028d7811f06864a53b1f15ff55"
+                "reference": "df16b615e371d81fb79e506277faea67a1be18f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/49cd7ea3d2563f028d7811f06864a53b1f15ff55",
-                "reference": "49cd7ea3d2563f028d7811f06864a53b1f15ff55",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/df16b615e371d81fb79e506277faea67a1be18f1",
+                "reference": "df16b615e371d81fb79e506277faea67a1be18f1",
                 "shasum": ""
             },
             "require": {
@@ -582,7 +583,7 @@
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "support": {
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.7.1"
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.8.0"
             },
             "funding": [
                 {
@@ -590,7 +591,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-08T13:30:06+00:00"
+            "time": "2023-03-06T14:43:22+00:00"
         },
         {
             "name": "psr/log",
@@ -644,16 +645,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.2.0",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "1ee04c65529dea5d8744774d474e7cbd2f1206d3"
+                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/1ee04c65529dea5d8744774d474e7cbd2f1206d3",
-                "reference": "1ee04c65529dea5d8744774d474e7cbd2f1206d3",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
+                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
                 "shasum": ""
             },
             "require": {
@@ -691,7 +692,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.2.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.2.1"
             },
             "funding": [
                 {
@@ -707,20 +708,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-25T10:21:52+00:00"
+            "time": "2023-03-01T10:25:55+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v6.2.5",
+            "version": "v6.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "c90dc446976a612e3312a97a6ec0069ab0c2099c"
+                "reference": "20808dc6631aecafbe67c186af5dcb370be3a0eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/c90dc446976a612e3312a97a6ec0069ab0c2099c",
-                "reference": "c90dc446976a612e3312a97a6ec0069ab0c2099c",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/20808dc6631aecafbe67c186af5dcb370be3a0eb",
+                "reference": "20808dc6631aecafbe67c186af5dcb370be3a0eb",
                 "shasum": ""
             },
             "require": {
@@ -755,7 +756,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v6.2.5"
+                "source": "https://github.com/symfony/finder/tree/v6.2.7"
             },
             "funding": [
                 {
@@ -771,7 +772,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-20T17:45:48+00:00"
+            "time": "2023-02-16T09:57:23+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -857,16 +858,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.4.19",
+            "version": "v5.4.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "71c05db20cb9b54d381a28255f17580e2b7e36a5"
+                "reference": "3713e20d93e46e681e51605d213027e48dab3469"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/71c05db20cb9b54d381a28255f17580e2b7e36a5",
-                "reference": "71c05db20cb9b54d381a28255f17580e2b7e36a5",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/3713e20d93e46e681e51605d213027e48dab3469",
+                "reference": "3713e20d93e46e681e51605d213027e48dab3469",
                 "shasum": ""
             },
             "require": {
@@ -912,7 +913,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.4.19"
+                "source": "https://github.com/symfony/yaml/tree/v5.4.21"
             },
             "funding": [
                 {
@@ -928,7 +929,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-10T18:51:14+00:00"
+            "time": "2023-02-21T19:46:44+00:00"
         },
         {
             "name": "thecodingmachine/safe",
@@ -1073,7 +1074,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "diversen/pebble-framework": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -49,7 +49,7 @@ class FlashTestController
     }
 
     #[Route(path: '/click')]
-    public function click(array $params, Object $object)
+    public function click()
     {
         $random = rand(0, 10);
         $message = "Your clicked a link and got this random number: $random";

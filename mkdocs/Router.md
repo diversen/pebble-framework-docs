@@ -18,6 +18,7 @@ The router instance is looking for the tags `route` and `verbs` using the attrib
 namespace App;
 
 use Pebble\Attributes\Route;
+use Pebble\Router\Request;
 
 class SimpleHomeController {
 
@@ -27,8 +28,9 @@ class SimpleHomeController {
     }
 
     #[Route(path: '/user/:username')]
-    public function userGreeting(array $params) {
-        echo "Hello world $params[username]!";
+    public function userGreeting(Request $request) {
+        $username = $request->param('username');
+        echo "Hello world $username!";
     } 
 }
 
@@ -36,9 +38,10 @@ class SimpleHomeController {
 
 The route will accept the verbs GET and POST and the path `/` will dispatch the method `index`.
 
-The second route using the path `/user/:username` will dispatch the method `userGreeting`. This method transforms the second URL segment into a string parameter, which the controller method may use. This route only accepts GET requests ((which is used if no verbs is used).  
+The second route using the path `/user/:username` will dispatch the method `userGreeting`. This method transforms the second URL segment into a string parameter, which the controller method may use. This route only accepts GET requests (which is used if no verbs is used).  
 
-The `path` can also be made a bit more complex, like e.g. `/user/:username/actions/:action`. If this route is matched, then the `$params` array will contain both `username` and `action` keys and values.
+The `path` can also be made a bit more complex, like e.g. `/user/:username/actions/:action`. If this route is matched, then the `Request` will contain both `username` and `action` keys and values.
+
 
 Let's connect the above `SimpleHomeController` class to a router instance in an index.php file: 
 
@@ -132,16 +135,19 @@ Here is a controller where both `$params` and `$middleware_object` are used:
 namespace App;
 
 use Pebble\Attributes\Route;
+use Pebble\Router\Request;
 
 class HomeController {
 
     #[Route(path: '/user/:username')]
-    public function userGreeting(array $params, object $middleware_object) {
-        echo "Hello world $params[username]!<br />";
-        echo $middleware_object->message . "<br />";
+    public function userGreeting(Request $request) {
+        $username = $request->param('username');
+        $message = $request->message;
+        echo "Hello world $username!<br />";
+        echo $message . "<br />";
 
-        // Note: You can always get the current route from the router if you need to. 
-        echo "Current route is: " . \Pebble\Router::getCurrentRoute();
+        // Note: You can always get the current route from the request object if you need to. 
+        echo "Current route is: " . $request->getCurrentRoute();
     }   
 }
 
@@ -159,21 +165,19 @@ require_once "../../vendor/autoload.php";
 use Pebble\Router;
 use Pebble\Exception\NotFoundException;
 use Pebble\ExceptionTrace;
-
-// Simple example of a middleware class
-class Middleware extends stdClass {}
+use Pebble\Router\Request;
 
 try {
 
     $router = new Router();
     $router->addClass(App\HomeController::class);
 
-    function middle_ware_1 ($params, $middleware_object) {
-        $middleware_object->message = 'From middle_ware_1';
+    function middle_ware_1 (Request $request) {
+        $request->message = 'From middle_ware_1';
     }
 
-    function middle_ware_2 ($params, $middleware_object) {
-        $middleware_object->message = 'From middle_ware_2';
+    function middle_ware_2 (Request $request) {
+        $request->message = 'From middle_ware_2';
     }
 
     // Connect the middleware
@@ -182,7 +186,6 @@ try {
 
     // You may set a middleware class which the middleware object will be created from
     // Otherwise it is just a stdClass the object will be created from
-    $router->setMiddlewareClass(Middleware::class);
     $router->run();
 } catch (NotFoundException $e) {
 

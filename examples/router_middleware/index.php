@@ -5,21 +5,19 @@ require_once "../../vendor/autoload.php";
 use Pebble\Router;
 use Pebble\Exception\NotFoundException;
 use Pebble\ExceptionTrace;
-
-// Simple example of a middleware class
-class Middleware extends stdClass {}
+use Pebble\Router\Request;
 
 try {
 
     $router = new Router();
     $router->addClass(App\HomeController::class);
 
-    function middle_ware_1 ($params, $middleware_object) {
-        $middleware_object->message = 'From middle_ware_1';
+    function middle_ware_1 (Request $request) {
+        $request->message = 'From middle_ware_1';
     }
 
-    function middle_ware_2 ($params, $middleware_object) {
-        $middleware_object->message = 'From middle_ware_2';
+    function middle_ware_2 (Request $request) {
+        $request->message = 'From middle_ware_2';
     }
 
     // Connect the middleware
@@ -28,7 +26,6 @@ try {
 
     // You may set a middleware class which the middleware object will be created from
     // Otherwise it is just a stdClass the object will be created from
-    $router->setMiddlewareClass(Middleware::class);
     $router->run();
 } catch (NotFoundException $e) {
 

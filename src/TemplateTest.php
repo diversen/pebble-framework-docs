@@ -4,16 +4,17 @@ namespace App;
 
 use Pebble\Template;
 use Pebble\Attributes\Route;
+use Pebble\Router\Request;
 
 class TemplateTest {
 
     #[Route(path: '/user/:username')]
-    public function userGreeting(array $params, object $middle_ware) {
+    public function userGreeting(Request $request) {
         
         $variables['title'] = 'Greeting with paragraphs'; 
-        $variables['username'] = $params['username'];
+        $variables['username'] = $request->param('username');
         $variables['paragraphs'] = [
-            'Hi <w><o><o> ' . $params['username'] . '<o><o><h> !', 
+            'Hi <w><o><o> ' . $request->param('username') . '<o><o><h> !', 
             'Nice day today!', 
             'Did they build a wall?', 
             'No, they build a dam!'

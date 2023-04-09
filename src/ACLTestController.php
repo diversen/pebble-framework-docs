@@ -5,6 +5,7 @@ namespace App;
 use Pebble\Service\ACLService;
 use Exception;
 use Pebble\Attributes\Route;
+use Pebble\Router\Request;
 
 class ACLTestController
 {
@@ -42,11 +43,11 @@ class ACLTestController
     }
 
     #[Route(path: '/note/read/:id')]
-    public function noteRead(array $params)
+    public function noteRead(Request $request)
     {
         $rights = [
             'entity' => 'note',
-            'entity_id' => $params['id'],
+            'entity_id' => $request->param('id'),
             'right' => 'read',
             'auth_id' => 1,
         ];

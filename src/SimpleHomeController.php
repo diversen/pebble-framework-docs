@@ -3,6 +3,7 @@
 namespace App;
 
 use Pebble\Attributes\Route;
+use Pebble\Router\Request;
 
 class SimpleHomeController {
 
@@ -12,7 +13,8 @@ class SimpleHomeController {
     }
 
     #[Route(path: '/user/:username')]
-    public function userGreeting(array $params) {
-        echo "Hello world $params[username]!";
+    public function userGreeting(Request $request) {
+        $username = $request->param('username');
+        echo "Hello world $username!";
     } 
 }
