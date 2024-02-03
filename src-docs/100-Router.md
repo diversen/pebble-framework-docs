@@ -51,7 +51,7 @@ You will also get a better trace of the error.
 
 You may add middleware to you application. Middleware are just `callables` which will be called before hitting the controller method. You may specify multiple middleware callables. 
 
-Middleware are called in the order that they are added to your `Router` instance. And the middleware callables will receive the same `$request` parameter as your controller.
+Middleware are called in the order that they are added to your `Router` instance. The middleware callables will receive the same `$request` parameter as your controller.
 
 Here is a controller where we expect a message to be set on the `$request` object: 
 
