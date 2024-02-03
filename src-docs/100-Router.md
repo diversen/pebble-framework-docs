@@ -51,11 +51,9 @@ You will also get a better trace of the error.
 
 You may add middleware to you application. Middleware are just `callables` which will be called before hitting the controller method. You may specify multiple middleware callables. 
 
-Middleware are called in the order that they are added to your `Router` instance. And the middleware callables will receive the same parameters as your controller.
+Middleware are called in the order that they are added to your `Router` instance. And the middleware callables will receive the same `$request` parameter as your controller.
 
-The second parameter of a callable is an `object`, which is passed from middleware to middleware. And finally it will be sent to the controller method. In the controller method the middleware object is also the second parameter.
-
-Here is a controller where both `$params` and `$middleware_object` are used: 
+Here is a controller where we expect a message to be set on the `$request` object: 
 
 <!-- include: src/HomeController.php -->
 
