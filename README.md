@@ -29,6 +29,11 @@ Install simple-file-watch (for adding changed php files to mkdocs):
 
     npm install -g simple-file-watch
 
+You will also need a working version of php and composer. Install
+requirements: 
+
+    composer install
+
 ## Edit and watch
 
 Watch while editing source files [src-docs](src-docs):
