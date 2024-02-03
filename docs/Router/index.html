@@ -623,9 +623,8 @@ You will add different routes as class names and then you will run the router: <
 <p>You will also get a better trace of the error. </p>
 <h3 id="middleware">Middleware</h3>
 <p>You may add middleware to you application. Middleware are just <code>callables</code> which will be called before hitting the controller method. You may specify multiple middleware callables. </p>
-<p>Middleware are called in the order that they are added to your <code>Router</code> instance. And the middleware callables will receive the same parameters as your controller.</p>
-<p>The second parameter of a callable is an <code>object</code>, which is passed from middleware to middleware. And finally it will be sent to the controller method. In the controller method the middleware object is also the second parameter.</p>
-<p>Here is a controller where both <code>$params</code> and <code>$middleware_object</code> are used: </p>
+<p>Middleware are called in the order that they are added to your <code>Router</code> instance. The middleware callables will receive the same <code>$request</code> parameter as your controller.</p>
+<p>Here is a controller where we expect a message to be set on the <code>$request</code> object: </p>
 <p><code>src/HomeController.php -&gt;</code></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
